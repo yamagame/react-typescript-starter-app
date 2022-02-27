@@ -1,15 +1,12 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path/posix';
-import fs from 'fs/promises';
+import { getDirs } from './vite-utils/index';
+
+const baseDir = 'src';
 
 export default defineConfig(async ({ command, mode }) => {
-  const dirs = (await fs.readdir('./src', { withFileTypes: true }))
-    .filter((dirent) => dirent.isDirectory())
-    .reduce((sum, dir) => {
-      sum[dir.name] = path.resolve(__dirname, path.join('src', dir.name));
-      return sum;
-    }, {});
+  const dirs = await getDirs(baseDir);
   return {
     plugins: [react()],
     server: {
@@ -20,7 +17,7 @@ export default defineConfig(async ({ command, mode }) => {
     },
     resolve: {
       alias: {
-        App: path.resolve(__dirname, 'src/App'),
+        App: path.resolve(__dirname, path.join(baseDir, 'App')),
         ...dirs,
       },
     },
