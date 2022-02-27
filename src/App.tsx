@@ -1,58 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useAppDispatch } from 'app/hooks';
+import { fetchPageAsync } from 'features/article/articleSlice';
+import { CounterPage } from 'pages/CounterPage';
+import { TopPage } from 'pages/TopPage';
+import { ArticlePage } from 'pages/ArticlePage';
 
-function App() {
+export function App() {
+  const dispatch = useAppDispatch();
+
+  React.useEffect(() => {
+    dispatch(fetchPageAsync());
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/*-------------- トップページ */}
+        <Route path="/" element={<TopPage />} />
+        {/*-------------- トップページ */}
+        <Route path="/counter" element={<CounterPage />} />
+        {/*-------------- 各ページ */}
+        <Route path={'article/:pageId'} element={<ArticlePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;

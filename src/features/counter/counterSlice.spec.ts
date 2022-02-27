@@ -31,4 +31,8 @@ describe('counter reducer', () => {
     const actual = counterReducer(initialState, incrementByAmount(2));
     expect(actual.value).toEqual(5);
   });
+
+  it('test', () => {
+    expect('aaa').toMatchSnapshot();
+  });
 });
