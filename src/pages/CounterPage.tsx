@@ -1,11 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from '../features/counter/Counter';
-import '../App.css';
+import logo from 'images/logo.svg';
+import { Counter } from 'features/counter/Counter';
+import 'App.css';
+import { PageTemplate } from 'templates/PageTemplate';
 
 export function CounterPage() {
   return (
-    <div className="App">
+    <PageTemplate>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
@@ -51,6 +52,6 @@ export function CounterPage() {
           </a>
         </span>
       </header>
-    </div>
+    </PageTemplate>
   );
 }
