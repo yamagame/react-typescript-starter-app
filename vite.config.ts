@@ -18,6 +18,7 @@ export default defineConfig(async ({ command, mode }) => {
     resolve: {
       alias: {
         App: path.resolve(__dirname, path.join(baseDir, 'App')),
+        'App.css': path.resolve(__dirname, path.join(baseDir, 'App.css')),
         ...dirs,
       },
     },
