@@ -1,7 +1,7 @@
-import { Counter } from 'ui/organisms/Counter';
-import { MainTemplate } from 'ui/templates/MainTemplate';
+import { Counter } from 'ui/components/organisms/Counter';
+import { MainTemplate } from 'ui/components/templates/MainTemplate';
 import logo from './logo.svg';
-import { Props as CounterProps } from 'ui/organisms/Counter';
+import { Props as CounterProps } from 'ui/components/organisms/Counter';
 
 export type Props = CounterProps;
 

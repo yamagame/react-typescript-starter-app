@@ -2,7 +2,9 @@
 
 ## Architecture
 
-![Architecture](docs/diagrams/out/architecture/directory.svg 'Architecture')
+![Directory](docs/diagrams/out/architecture/directory.svg 'Directory')
+
+![Dependencies](docs/diagrams/out/architecture/dependencies.svg 'Dependencies')
 
 ## links
 

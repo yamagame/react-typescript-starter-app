@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MainTemplate } from 'ui/templates/MainTemplate';
+import { MainTemplate } from 'ui/components/templates/MainTemplate';
 
 export type Props = {
   pages: {
@@ -9,7 +9,7 @@ export type Props = {
   }[];
 };
 
-export function TopPage(props: Props) {
+export function ListPage(props: Props) {
   const { pages } = props;
   return (
     <MainTemplate>

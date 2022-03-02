@@ -16,24 +16,83 @@ package src {
     トップレベルのソースコード
   end note
   package core {
-    rectangle controller
+    rectangle gateways
     rectangle slices
     rectangle store
+    rectangle usecases
   }
   note right of core
     ビジネスロジックを含めた
     ソースコード
   end note
   package ui {
-    rectangle atom
-    rectangle molecules
-    rectangle organisms
-    rectangle pages
-    rectangle templates
+    package components {
+      rectangle atom
+      rectangle molecules
+      rectangle organisms
+      rectangle pages
+      rectangle templates
+    }
+    package controller {
+    }
   }
-  note right of ui
+  note right of components
     atomic design に従った分離可能な UI 部品
+    ビジネスロジックを含めない
+  end note
+  note right of controller
+    ビジネスロジックを扱う UI 部品
+    ルーターから呼ばれる
   end note
 }
+
+@enduml
+
+@startuml dependencies
+scale 400 width
+title  React サンプルプロジェクト 依存関係図
+
+skinparam packageStyle Rectangle
+
+rectangle index
+rectangle App
+rectangle routers
+rectangle controllers
+package components {
+  rectangle pages
+  rectangle organisms
+  rectangle molecules
+  rectangle atoms
+  rectangle templates
+}
+
+note top of components
+  UI 部品
+end note
+
+index ..> App
+App ..> routers
+routers ..> controllers
+pages .> templates
+controllers ...> pages
+organisms .> molecules
+molecules .> atoms
+templates .> organisms
+
+package core {
+  rectangle gateways
+  rectangle slices
+  rectangle store
+  rectangle usecases
+}
+
+controllers .> core
+store .> slices
+slices .> usecases
+usecases .> gateways
+
+note top of core
+  ビジネスロジック
+end note
 
 @enduml

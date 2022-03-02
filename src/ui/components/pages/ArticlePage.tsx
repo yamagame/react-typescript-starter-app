@@ -1,4 +1,4 @@
-import { MainTemplate } from 'ui/templates/MainTemplate';
+import { MainTemplate } from 'ui/components/templates/MainTemplate';
 
 export type Props = {
   page?: {

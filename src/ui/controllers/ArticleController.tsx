@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
-import { selectState } from 'core/slices/article/articleSlice';
 import { useAppSelector } from 'core/store';
-import { ArticlePage } from 'ui/pages/ArticlePage';
+import { selectState } from 'core/slices/article/articleSlice';
+import { ArticlePage } from 'ui/components/pages/ArticlePage';
 
 export function ArticleController() {
   const { pages } = useAppSelector(selectState);

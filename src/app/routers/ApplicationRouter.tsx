@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { CounterController } from 'core/controller/CounterController';
-import { TopController } from 'core/controller/TopController';
-import { ArticleController } from 'core/controller/ArticleController';
+import { CounterController } from 'ui/controllers/CounterController';
+import { TopController } from 'ui/controllers/TopController';
+import { ArticleController } from 'ui/controllers/ArticleController';
 
 export function AppRouter() {
   return (

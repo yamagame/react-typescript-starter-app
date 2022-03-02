@@ -1,27 +1,16 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../store';
+import { Article, fetchPagesAsync } from 'core/gateways/article';
 
-export interface Article {
+export interface ArticleState {
   status: string;
-  pages: {
-    id: string;
-    title: string;
-    content: string;
-  }[];
+  pages: Article[];
 }
 
-const initialState: Article = {
+const initialState: ArticleState = {
   status: 'idle',
   pages: [],
 };
-
-export const fetchPageAsync = createAsyncThunk(
-  'article/fetchPages',
-  async () => {
-    const response = await fetch('/pages', { method: 'POST' });
-    return response.json();
-  }
-);
 
 export const articleSlice = createSlice({
   name: 'article',
@@ -29,10 +18,10 @@ export const articleSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchPageAsync.pending, (state) => {
+      .addCase(fetchPagesAsync.pending, (state) => {
         state.status = 'loading';
       })
-      .addCase(fetchPageAsync.fulfilled, (state, action) => {
+      .addCase(fetchPagesAsync.fulfilled, (state, action) => {
         state.status = 'idle';
         state.pages = action.payload;
       });

@@ -1,6 +1,6 @@
 import { useAppSelector, useAppDispatch } from 'core/store';
 import { selectCount } from 'core/slices/counter/counterSlice';
-import { CounterPage } from 'ui/pages/CounterPage';
+import { CounterPage } from 'ui/components/pages/CounterPage';
 import {
   decrement,
   increment,
@@ -18,9 +18,10 @@ export function CounterController() {
       actions={{
         increment: () => dispatch(increment()),
         decrement: () => dispatch(decrement()),
-        incrementByAmount: (amount) => dispatch(incrementByAmount(amount)),
-        incrementAsync: (value) => dispatch(incrementAsync(value)),
-        incrementIfOdd: (value) => dispatch(incrementIfOdd(value)),
+        incrementByAmount: (amount: number) =>
+          dispatch(incrementByAmount(amount)),
+        incrementAsync: (value: number) => dispatch(incrementAsync(value)),
+        incrementIfOdd: (value: number) => dispatch(incrementIfOdd(value)),
       }}
     />
   );
