@@ -1,15 +1,17 @@
-import React from 'react';
-import logo from 'images/logo.svg';
-import { Counter } from 'features/counter/Counter';
-import 'App.css';
-import { PageTemplate } from 'templates/PageTemplate';
+import { Counter } from 'ui/organisms/Counter';
+import { MainTemplate } from 'ui/templates/MainTemplate';
+import logo from './logo.svg';
+import { Props as CounterProps } from 'ui/organisms/Counter';
 
-export function CounterPage() {
+export type Props = CounterProps;
+
+export function CounterPage(props: Props) {
+  const { count, actions } = props;
   return (
-    <PageTemplate>
+    <MainTemplate>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
+        <Counter count={count} actions={actions} />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -52,6 +54,6 @@ export function CounterPage() {
           </a>
         </span>
       </header>
-    </PageTemplate>
+    </MainTemplate>
   );
 }

@@ -1,5 +1,11 @@
 # React-TypeScript Starter Project
 
+## Architecture
+
+![Architecture](docs/diagrams/out/architecture/directory.svg 'Architecture')
+
+## links
+
 - [ECMAScript® 2022 Language Specification](https://tc39.es/ecma262/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [React](https://ja.reactjs.org/)
@@ -14,3 +20,5 @@
 - [Storybook](https://storybook.js.org/)
 - [Express](https://expressjs.com/ja/)
 - [GraphQL](https://graphql.org/)
+- [Formik](https://formik.org/)
+- [PlantUML](https://plantuml.com/ja/guide)

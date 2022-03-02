@@ -1,11 +1,11 @@
 import React from 'react';
-import 'App.css';
+import 'app/App.css';
 
-type Props = {
+export type Props = {
   children?: React.ReactNode;
 };
 
-export function PageTemplate(props: Props) {
+export function MainTemplate(props: Props) {
   const { children } = props;
   return <div className="App">{children}</div>;
 }

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="682.3077px" preserveAspectRatio="none" style="width:400px;height:682px;background:#FFFFFF;" version="1.1" viewBox="0 0 400 682" width="400.7692px" zoomAndPan="magnify"><defs><filter height="300%" id="f1qtt2il10m1u9" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="1.5384615384615385"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="3.076923076923077" dy="3.076923076923077" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="13.8462" lengthAdjust="spacing" textLength="294.6154" x="48.0769" y="13.3864">React サンプルプロジェクト ディレクトリ構成</text><!--MD5=[c60679dfbe80eab0cae5e3add7b10464]
+cluster src--><rect fill="#FFFFFF" filter="url(#f1qtt2il10m1u9)" height="651.5385" rx="1.9231" ry="1.9231" style="stroke:#000000;stroke-width:1.153846153846154;" width="386.1538" x="5.3846" y="21.6917"/><text fill="#000000" font-family="sans-serif" font-size="10.7692" font-weight="bold" lengthAdjust="spacing" textLength="16.1538" x="190.3846" y="33.6418">src</text><!--MD5=[d5ac3844f66b12d9e08170e47495e096]
+cluster app--><rect fill="#FFFFFF" filter="url(#f1qtt2il10m1u9)" height="148.4615" rx="1.9231" ry="1.9231" style="stroke:#000000;stroke-width:1.153846153846154;" width="93.0769" x="37.3077" y="60.9225"/><text fill="#000000" font-family="sans-serif" font-size="10.7692" font-weight="bold" lengthAdjust="spacing" textLength="20" x="73.8462" y="72.8726">app</text><!--MD5=[01435ace8273dc3cae88e7f376e4d373]
+cluster core--><rect fill="#FFFFFF" filter="url(#f1qtt2il10m1u9)" height="148.4615" rx="1.9231" ry="1.9231" style="stroke:#000000;stroke-width:1.153846153846154;" width="280" x="31.9231" y="240.1532"/><text fill="#000000" font-family="sans-serif" font-size="10.7692" font-weight="bold" lengthAdjust="spacing" textLength="23.0769" x="160.3846" y="252.1034">core</text><!--MD5=[64e2e010ba86d7988e5cd73bd64f61f9]
+cluster ui--><rect fill="#FFFFFF" filter="url(#f1qtt2il10m1u9)" height="203.0769" rx="1.9231" ry="1.9231" style="stroke:#000000;stroke-width:1.153846153846154;" width="294.2308" x="30" y="445.5379"/><text fill="#000000" font-family="sans-serif" font-size="10.7692" font-weight="bold" lengthAdjust="spacing" textLength="10.7692" x="171.7308" y="457.488">ui</text><path d="M199.2308,133.2302 L199.2308,160.631 A1.9231,1.9231 0 0 0 201.1538,162.5541 L343.4615,162.5541 A1.9231,1.9231 0 0 0 345.3846,160.631 L345.3846,138.9994 L337.6923,131.3071 L201.1538,131.3071 A1.9231,1.9231 0 0 0 199.2308,133.2302 " fill="#FBFB77" filter="url(#f1qtt2il10m1u9)" style="stroke:#A80036;stroke-width:0.7692307692307693;"/><path d="M337.6923,131.3071 L337.6923,138.0379 A0.9615,0.9615 0 0 0 338.6538,138.9994 L345.3846,138.9994 L337.6923,131.3071 " fill="#FBFB77" style="stroke:#A80036;stroke-width:0.7692307692307693;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="130" x="203.8462" y="144.8212">アプリケーションを構成する</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="130" x="203.8462" y="156.5986">トップレベルのソースコード</text><path d="M204.2308,191.6917 L204.2308,219.0925 A1.9231,1.9231 0 0 0 206.1538,221.0156 L338.4615,221.0156 A1.9231,1.9231 0 0 0 340.3846,219.0925 L340.3846,197.4609 L332.6923,189.7686 L206.1538,189.7686 A1.9231,1.9231 0 0 0 204.2308,191.6917 " fill="#FBFB77" filter="url(#f1qtt2il10m1u9)" style="stroke:#A80036;stroke-width:0.7692307692307693;"/><path d="M332.6923,189.7686 L332.6923,196.4994 A0.9615,0.9615 0 0 0 333.6538,197.4609 L340.3846,197.4609 L332.6923,189.7686 " fill="#FBFB77" style="stroke:#A80036;stroke-width:0.7692307692307693;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="120" x="208.8462" y="203.2828">ビジネスロジックを含めた</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="60" x="208.8462" y="215.0601">ソースコード</text><path d="M165.3846,409.384 L165.3846,425.0075 A1.9231,1.9231 0 0 0 167.3077,426.9306 L377.3077,426.9306 A1.9231,1.9231 0 0 0 379.2308,425.0075 L379.2308,415.1532 L371.5385,407.4609 L167.3077,407.4609 A1.9231,1.9231 0 0 0 165.3846,409.384 " fill="#FBFB77" filter="url(#f1qtt2il10m1u9)" style="stroke:#A80036;stroke-width:0.7692307692307693;"/><path d="M371.5385,407.4609 L371.5385,414.1917 A0.9615,0.9615 0 0 0 372.5,415.1532 L379.2308,415.1532 L371.5385,407.4609 " fill="#FBFB77" style="stroke:#A80036;stroke-width:0.7692307692307693;"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="197.6923" x="170" y="420.9751">atomic design に従った分離可能な UI 部品</text><!--MD5=[58b0dd66ef19f0813ca5dbc778434f73]
+entity routers--><rect fill="#FEFECE" filter="url(#f1qtt2il10m1u9)" height="28.0679" rx="1.9231" ry="1.9231" style="stroke:#000000;stroke-width:1.153846153846154;" width="53.8462" x="56.9231" y="93.9994"/><text fill="#000000" font-family="sans-serif" font-size="10.7692" lengthAdjust="spacing" textLength="38.4615" x="64.6154" y="112.1034">routers</text><!--MD5=[572139d4e0d5120118345a808c541aa6]
+entity App.tsx--><rect fill="#FEFECE" filter="url(#f1qtt2il10m1u9)" height="28.0679" rx="1.9231" ry="1.9231" style="stroke:#000000;stroke-width:1.153846153846154;" width="56.1538" x="55.7692" y="148.6148"/><text fill="#000000" font-family="sans-serif" font-size="10.7692" lengthAdjust="spacing" textLength="40.7692" x="63.4615" y="166.7188">App.tsx</text><!--MD5=[c05fcadc036a699206cfdfa4a4fdb889]
+entity controller--><rect fill="#FEFECE" filter="url(#f1qtt2il10m1u9)" height="28.0679" rx="1.9231" ry="1.9231" style="stroke:#000000;stroke-width:1.153846153846154;" width="66.9231" x="50.3846" y="342.4609"/><text fill="#000000" font-family="sans-serif" font-size="10.7692" lengthAdjust="spacing" textLength="51.5385" x="58.0769" y="360.5649">controller</text><!--MD5=[ac2385813f1b79deff9596fc3d11e257]
+entity slices--><rect fill="#FEFECE" filter="url(#f1qtt2il10m1u9)" height="28.0679" rx="1.9231" ry="1.9231" style="stroke:#000000;stroke-width:1.153846153846154;" width="43.8462" x="61.9231" y="287.8456"/><text fill="#000000" font-family="sans-serif" font-size="10.7692" lengthAdjust="spacing" textLength="28.4615" x="69.6154" y="305.9495">slices</text><!--MD5=[0686720d71d32ea68f81164171d509ce]
+entity store--><rect fill="#FEFECE" filter="url(#f1qtt2il10m1u9)" height="28.0679" rx="1.9231" ry="1.9231" style="stroke:#000000;stroke-width:1.153846153846154;" width="42.3077" x="251.1538" y="342.4609"/><text fill="#000000" font-family="sans-serif" font-size="10.7692" lengthAdjust="spacing" textLength="26.9231" x="258.8462" y="360.5649">store</text><!--MD5=[05cc4b31965ee2b1594ddd2d10393c52]
+entity atom--><rect fill="#FEFECE" filter="url(#f1qtt2il10m1u9)" height="28.0679" rx="1.9231" ry="1.9231" style="stroke:#000000;stroke-width:1.153846153846154;" width="42.3077" x="62.6923" y="602.4609"/><text fill="#000000" font-family="sans-serif" font-size="10.7692" lengthAdjust="spacing" textLength="26.9231" x="70.3846" y="620.5649">atom</text><!--MD5=[449dffa8e95e04b1e6c5f80ed83d8145]
+entity molecules--><rect fill="#FEFECE" filter="url(#f1qtt2il10m1u9)" height="28.0679" rx="1.9231" ry="1.9231" style="stroke:#000000;stroke-width:1.153846153846154;" width="68.4615" x="49.6154" y="547.8456"/><text fill="#000000" font-family="sans-serif" font-size="10.7692" lengthAdjust="spacing" textLength="53.0769" x="57.3077" y="565.9495">molecules</text><!--MD5=[b6cc7475285a593b5cc9fc221385c7bb]
+entity organisms--><rect fill="#FEFECE" filter="url(#f1qtt2il10m1u9)" height="28.0679" rx="1.9231" ry="1.9231" style="stroke:#000000;stroke-width:1.153846153846154;" width="70.7692" x="48.4615" y="493.2302"/><text fill="#000000" font-family="sans-serif" font-size="10.7692" lengthAdjust="spacing" textLength="55.3846" x="56.1538" y="511.3341">organisms</text><!--MD5=[85f4d1a33338ddce045f9b827d37a273]
+entity pages--><rect fill="#FEFECE" filter="url(#f1qtt2il10m1u9)" height="28.0679" rx="1.9231" ry="1.9231" style="stroke:#000000;stroke-width:1.153846153846154;" width="46.9231" x="248.8462" y="602.4609"/><text fill="#000000" font-family="sans-serif" font-size="10.7692" lengthAdjust="spacing" textLength="31.5385" x="256.5385" y="620.5649">pages</text><!--MD5=[4973cff6d5222f460e58305e2909ce55]
+entity templates--><rect fill="#FEFECE" filter="url(#f1qtt2il10m1u9)" height="28.0679" rx="1.9231" ry="1.9231" style="stroke:#000000;stroke-width:1.153846153846154;" width="66.9231" x="238.8462" y="547.8456"/><text fill="#000000" font-family="sans-serif" font-size="10.7692" lengthAdjust="spacing" textLength="51.5385" x="246.5385" y="565.9495">templates</text><!--MD5=[fff67e4272c5fd07334f886fdffe7ea9]
+link app to GMN8--><path d="M130.3933,192.8669 C130.5934,192.8052 130.7934,192.7431 130.9932,192.6808 C131.7927,192.4315 132.5903,192.1778 133.3846,191.9198 C136.5621,190.8877 139.6894,189.7859 142.6923,188.6148 C153.3846,184.4456 154.7385,180.5917 165.3846,176.3071 C177.9769,171.2379 191.7462,166.7302 205.0769,162.8686 " fill="none" id="app-GMN8" style="stroke:#A80036;stroke-width:0.7692307692307693;stroke-dasharray:7.0,7.0;"/><!--MD5=[155fa2e29dcf2ae31d6d684163f82c6c]
+link core to GMN15--><path d="M155.1528,240.0204 C156.0613,239.7513 156.9728,239.4812 157.8871,239.2103 C159.7156,238.6685 161.5549,238.1236 163.4021,237.5763 C167.0964,236.4817 170.8221,235.3778 174.5553,234.2718 C189.488,229.8475 204.5404,225.3879 218.1846,221.3456 " fill="none" id="core-GMN15" style="stroke:#A80036;stroke-width:0.7692307692307693;stroke-dasharray:7.0,7.0;"/><!--MD5=[bc414d5553aa7ec0ea3bb8ed9b72b4f3]
+link ui to GMN24--><path d="M164.2389,445.3382 C172.4325,443.1803 180.7711,440.9841 188.9953,438.818 C205.4438,434.4859 221.4346,430.2744 234.8923,426.7302 " fill="none" id="ui-GMN24" style="stroke:#A80036;stroke-width:0.7692307692307693;stroke-dasharray:7.0,7.0;"/><!--MD5=[212716929075aeef688f8475261dbd51]
+link controller to slices--><!--MD5=[ac9baaac6488f212636955c26d00f1c7]
+link controller to store--><!--MD5=[a9a150219c5f6b8c328a86c486dd7e3c]
+link atom to molecules--><!--MD5=[cd88a2aba3faf0d4f58d15b9b7ef8a9e]
+link molecules to organisms--><!--MD5=[f99e1d495d5d74559fe78b6d12336430]
+link atom to pages--><!--MD5=[beb0bcf5720fcd9f7ba214a16ab0694e]
+link pages to templates--><!--MD5=[b11757e1deb4a137bbde57edb9ac6a87]
+@startuml directory
+skinparam roundcorner 5
+scale 400 width
+skinparam packageStyle Rectangle
+left to right direction
+
+title React サンプルプロジェクト ディレクトリ構成
+
+package src {
+  package app {
+    rectangle routers
+    rectangle App.tsx
+  }
+  note right of app
+    アプリケーションを構成する
+    トップレベルのソースコード
+  end note
+  package core {
+    rectangle controller
+    rectangle slices
+    rectangle store
+  }
+  note right of core
+    ビジネスロジックを含めた
+    ソースコード
+  end note
+  package ui {
+    rectangle atom
+    rectangle molecules
+    rectangle organisms
+    rectangle pages
+    rectangle templates
+  }
+  note right of ui
+    atomic design に従った分離可能な UI 部品
+  end note
+}
+
+@enduml
+
+PlantUML version 1.2022.0(Wed Jan 12 01:16:42 JST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg>

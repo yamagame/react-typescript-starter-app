@@ -1,0 +1,39 @@
+@startuml directory
+skinparam roundcorner 5
+scale 400 width
+skinparam packageStyle Rectangle
+left to right direction
+
+title React サンプルプロジェクト ディレクトリ構成
+
+package src {
+  package app {
+    rectangle routers
+    rectangle App.tsx
+  }
+  note right of app
+    アプリケーションを構成する
+    トップレベルのソースコード
+  end note
+  package core {
+    rectangle controller
+    rectangle slices
+    rectangle store
+  }
+  note right of core
+    ビジネスロジックを含めた
+    ソースコード
+  end note
+  package ui {
+    rectangle atom
+    rectangle molecules
+    rectangle organisms
+    rectangle pages
+    rectangle templates
+  }
+  note right of ui
+    atomic design に従った分離可能な UI 部品
+  end note
+}
+
+@enduml
