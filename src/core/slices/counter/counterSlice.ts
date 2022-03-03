@@ -79,4 +79,12 @@ export const incrementIfOdd =
     }
   };
 
+export const actions = {
+  increment,
+  decrement,
+  incrementByAmount,
+  incrementIfOdd,
+  incrementAsync,
+};
+
 export default counterSlice.reducer;

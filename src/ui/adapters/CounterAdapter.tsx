@@ -1,13 +1,7 @@
 import { useAppSelector, useAppDispatch } from 'core/store';
 import { selectCount } from 'core/slices/counter/counterSlice';
 import { CounterPage } from 'ui/components/pages/CounterPage';
-import {
-  decrement,
-  increment,
-  incrementByAmount,
-  incrementAsync,
-  incrementIfOdd,
-} from 'core/slices/counter/counterSlice';
+import { actions } from 'core/slices/counter/counterSlice';
 
 export function CounterAdapter() {
   const count = useAppSelector(selectCount);
@@ -16,12 +10,14 @@ export function CounterAdapter() {
     <CounterPage
       count={count}
       actions={{
-        increment: () => dispatch(increment()),
-        decrement: () => dispatch(decrement()),
+        increment: () => dispatch(actions.increment()),
+        decrement: () => dispatch(actions.decrement()),
         incrementByAmount: (amount: number) =>
-          dispatch(incrementByAmount(amount)),
-        incrementAsync: (value: number) => dispatch(incrementAsync(value)),
-        incrementIfOdd: (value: number) => dispatch(incrementIfOdd(value)),
+          dispatch(actions.incrementByAmount(amount)),
+        incrementAsync: async (value: number) =>
+          dispatch(actions.incrementAsync(value)),
+        incrementIfOdd: (value: number) =>
+          dispatch(actions.incrementIfOdd(value)),
       }}
     />
   );
