@@ -1,18 +1,18 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { CounterController } from 'ui/controllers/CounterController';
-import { TopController } from 'ui/controllers/TopController';
-import { ArticleController } from 'ui/controllers/ArticleController';
+import { CounterAdapter } from 'ui/adapters/CounterAdapter';
+import { TopAdapter } from 'ui/adapters/TopAdapter';
+import { ArticleAdapter } from 'ui/adapters/ArticleAdapter';
 
 export function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
         {/*-------------- トップページ */}
-        <Route path="/" element={<TopController />} />
+        <Route path="/" element={<TopAdapter />} />
         {/*-------------- トップページ */}
-        <Route path="/counter" element={<CounterController />} />
+        <Route path="/counter" element={<CounterAdapter />} />
         {/*-------------- 各ページ */}
-        <Route path={'article/:pageId'} element={<ArticleController />} />
+        <Route path={'article/:pageId'} element={<ArticleAdapter />} />
       </Routes>
     </BrowserRouter>
   );

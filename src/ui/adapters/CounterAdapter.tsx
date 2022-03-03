@@ -9,7 +9,7 @@ import {
   incrementIfOdd,
 } from 'core/slices/counter/counterSlice';
 
-export function CounterController() {
+export function CounterAdapter() {
   const count = useAppSelector(selectCount);
   const dispatch = useAppDispatch();
   return (
