@@ -57,7 +57,7 @@ skinparam packageStyle Rectangle
 rectangle index
 rectangle App
 rectangle routers
-rectangle controllers
+rectangle adapters
 package components {
   rectangle pages
   rectangle organisms
@@ -72,9 +72,9 @@ end note
 
 index ..> App
 App ..> routers
-routers ..> controllers
+routers ..> adapters
 pages .> templates
-controllers ...> pages
+adapters ...> pages
 organisms .> molecules
 molecules .> atoms
 templates .> organisms
@@ -86,7 +86,7 @@ package core {
   rectangle usecases
 }
 
-controllers .> core
+adapters .> core
 store .> slices
 slices .> usecases
 usecases .> gateways
