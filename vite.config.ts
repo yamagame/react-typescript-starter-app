@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path/posix';
-import { getDirs } from './vite-utils/index';
+import { getDirsAsync } from './vite-utils/index';
 
 const baseDir = 'src';
 
 export default defineConfig(async ({ command, mode }) => {
-  const dirs = await getDirs(baseDir);
+  const dirs = await getDirsAsync(baseDir);
   return {
     plugins: [react()],
     server: {
