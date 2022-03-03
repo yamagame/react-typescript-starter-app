@@ -4,7 +4,7 @@ import fs from 'fs/promises';
 /**
  * 指定したディレクトリ内にあるディレクトリのフルパスを連想配列で返す
  */
-export const getDirs = async (baseDir: string) =>
+export const getDirsAsync = async (baseDir: string) =>
   (await fs.readdir(baseDir, { withFileTypes: true }))
     .filter((dirent) => dirent.isDirectory())
     .reduce((sum, dir) => {
@@ -14,7 +14,7 @@ export const getDirs = async (baseDir: string) =>
 
 if (require.main === module) {
   async function main() {
-    console.log(await getDirs('../src'));
+    console.log(await getDirsAsync('../src'));
   }
   main();
 }
