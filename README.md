@@ -1,12 +1,14 @@
 # React-TypeScript Starter Project
 
-## Architecture
+### ディレクトリ構成
 
 ![Directory](docs/diagrams/out/architecture/directory.svg 'Directory')
 
+### 依存関係
+
 ![Dependencies](docs/diagrams/out/architecture/dependencies.svg 'Dependencies')
 
-## links
+### 関連技術のリンク
 
 - [ECMAScript® 2022 Language Specification](https://tc39.es/ecma262/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -24,5 +26,5 @@
 - [Express](https://expressjs.com/ja/)
 - [GraphQL](https://graphql.org/)
 - [Formik](https://formik.org/)
-- [PlantUML](https://plantuml.com/ja/guide)
+- [PlantUML](https://plantuml-documentation.readthedocs.io/en/latest/index.html)
 - [Express](https://expressjs.com/ja/)
