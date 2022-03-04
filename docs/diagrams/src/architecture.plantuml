@@ -1,56 +1,34 @@
-@startuml directory
-skinparam roundcorner 5
-scale 400 width
-skinparam packageStyle Rectangle
-left to right direction
-
-title React サンプルプロジェクト ディレクトリ構成
-
-package src {
-  package app {
-    rectangle routers
-    rectangle App.tsx
+@startsalt directory
+' title  React サンプルプロジェクト ディレクトリ構成
+{
+  {T
+    + src
+    ++ <color:#00A1FF>**app** | アプリケーションを構成するトップレベルのソースコード
+    +++ routers | ルーター
+    +++ App.tsx
+    ++ <color:#00A1FF>**core** | React コンポーネント以外のビジネスロジックを含むソースコード
+    +++ gateways | 外部リソースとの接続用モジュール
+    +++ slices | React のスライス
+    +++ store | React のストア
+    +++ usecase | アプリケーションのユースケース
+    ++ stories | Storybook 関連ファイル
+    ++ <color:#00A1FF>**ui** | React のコンポーネント
+    +++ adapters | ビジネスロジックとの接続用コンポーネント
+    +++ components | Atomic Desgin に従うビジネスロジックを含まない再利用可能なコンポーネント
+    ++++ atoms
+    ++++ molecules
+    ++++ organisms
+    ++++ pages
+    ++++ templates
   }
-  note right of app
-    アプリケーションを構成する
-    トップレベルのソースコード
-  end note
-  package core {
-    rectangle gateways
-    rectangle slices
-    rectangle store
-    rectangle usecases
-  }
-  note right of core
-    ビジネスロジックを含めた
-    ソースコード
-  end note
-  package ui {
-    package components {
-      rectangle atom
-      rectangle molecules
-      rectangle organisms
-      rectangle pages
-      rectangle templates
-    }
-    package controller {
-    }
-  }
-  note right of components
-    atomic design に従った分離可能な UI 部品
-    ビジネスロジックを含めない
-  end note
-  note right of controller
-    ビジネスロジックを扱う UI 部品
-    ルーターから呼ばれる
-  end note
 }
-
-@enduml
+@endsalt
 
 @startuml dependencies
-scale 400 width
-title  React サンプルプロジェクト 依存関係図
+' title  React サンプルプロジェクト 依存関係図
+skinparam shadowing false
+scale 0.8
+' scale 400 width
 
 skinparam packageStyle Rectangle
 
@@ -58,6 +36,7 @@ rectangle index
 rectangle App
 rectangle routers
 rectangle adapters
+
 package components {
   rectangle pages
   rectangle organisms
@@ -66,19 +45,6 @@ package components {
   rectangle templates
 }
 
-note top of components
-  UI 部品
-end note
-
-index ..> App
-App ..> routers
-routers ..> adapters
-pages .> templates
-adapters ...> pages
-organisms .> molecules
-molecules .> atoms
-templates .> organisms
-
 package core {
   rectangle gateways
   rectangle slices
@@ -86,12 +52,26 @@ package core {
   rectangle usecases
 }
 
-adapters .> core
-store .> slices
-slices .> usecases
-usecases .> gateways
+note top of components
+  UI 部品
+end note
 
-note top of core
+index --> App
+App -> routers
+routers --> adapters
+pages -> templates
+organisms -> molecules
+molecules -> atoms
+templates -> organisms
+
+store -> slices
+slices -> usecases
+usecases -> gateways
+
+adapters -> components
+adapters --> core
+
+note bottom of core
   ビジネスロジック
 end note
 
