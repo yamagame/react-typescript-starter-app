@@ -12,10 +12,12 @@ export type Props = {
 export function ListPage(props: Props) {
   const { pages } = props;
   return (
-    <MainTemplate>
-      <h1>Top</h1>
+    <MainTemplate header="Top">
       <div>
         <Link to={`/counter`}>Counter</Link>
+      </div>
+      <div>
+        <Link to={`/form`}>Form</Link>
       </div>
       {pages.map((page) => (
         <div key={page.id}>

@@ -11,7 +11,7 @@ export function ArticlePage(props: Props) {
   const { page } = props;
 
   return (
-    <MainTemplate>
+    <MainTemplate header="Ariticle">
       <h1>{page?.title}</h1>
       <p>{page?.content}</p>
     </MainTemplate>

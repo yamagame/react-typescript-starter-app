@@ -80,9 +80,7 @@ export const incrementIfOdd =
   };
 
 export const actions = {
-  increment,
-  decrement,
-  incrementByAmount,
+  ...counterSlice.actions,
   incrementIfOdd,
   incrementAsync,
 };

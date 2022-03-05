@@ -1,7 +1,7 @@
 import { useAppSelector, useAppDispatch } from 'core/store';
-import { selectCount } from 'core/slices/counter/counterSlice';
+import { selectCount } from 'core/slices/counter';
 import { CounterPage } from 'ui/components/pages/CounterPage';
-import { actions } from 'core/slices/counter/counterSlice';
+import { actions } from 'core/slices/counter';
 
 export function CounterAdapter() {
   const count = useAppSelector(selectCount);
