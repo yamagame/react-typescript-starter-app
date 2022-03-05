@@ -1,18 +1,20 @@
 import { FormPage } from 'ui/components/pages/FormPage';
+import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
+import {
+  SizeType as FormSampleSizeType,
+  FruitType as FormSampleFruitType,
+} from 'ui/components/organisms/FormSample';
 
 type FormProps = {
-  size: 'big' | 'small';
+  size: FormSampleSizeType;
   name: string;
-  fruit: {
-    apple: boolean;
-    tangerine: boolean;
-    grape: boolean;
-  };
+  fruit: FormSampleFruitType;
   blood: string;
 };
 
 export function FormFormikAdapter() {
+  const navigate = useNavigate();
   const formik = useFormik<FormProps>({
     initialValues: {
       size: 'big',
@@ -25,7 +27,7 @@ export function FormFormikAdapter() {
       blood: 'A',
     },
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      navigate('/');
     },
   });
   return (
@@ -41,6 +43,7 @@ export function FormFormikAdapter() {
           onChangeFruit: (fruit, value) =>
             formik.setFieldValue(`fruit.${fruit}`, value),
           onChagenBlood: (blood) => formik.setFieldValue('blood', blood),
+          onSubmit: () => formik.handleSubmit(),
         }}
       />
     </form>

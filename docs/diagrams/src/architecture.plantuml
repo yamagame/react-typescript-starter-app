@@ -4,22 +4,23 @@
   {T
     + src
     ++ <color:#00A1FF>**app** | アプリケーションを構成するトップレベルのソースコード
-    +++ routers | ルーター
     +++ App.tsx
     ++ <color:#00A1FF>**core** | React コンポーネント以外のビジネスロジックを含むソースコード
     +++ gateways | 外部リソースとの接続用モジュール
     +++ slices | React のスライス
     +++ store | React のストア
     +++ usecase | アプリケーションのユースケース
+    ++ <color:#00A1FF>**routers** | ルーター
     ++ stories | Storybook 関連ファイル
     ++ <color:#00A1FF>**ui** | React のコンポーネント
     +++ adapters | ビジネスロジックとの接続用コンポーネント
-    +++ components | Atomic Desgin に従うビジネスロジックを含まない再利用可能なコンポーネント
+    +++ components | Atomic Desgin に沿ったビジネスロジックを含まない再利用可能なコンポーネント
     ++++ atoms
     ++++ molecules
     ++++ organisms
     ++++ pages
     ++++ templates
+    ++ index.tsx | React エントリーポイント
   }
 }
 @endsalt
@@ -72,7 +73,7 @@ adapters -> components
 adapters --> core
 
 note bottom of core
-  ビジネスロジック
+  UI 以外の部品
 end note
 
 @enduml

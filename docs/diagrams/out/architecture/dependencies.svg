@@ -13,7 +13,7 @@ entity usecases--><rect fill="#FEFECE" height="29.1906" style="stroke:#000000;st
 entity index--><rect fill="#FEFECE" height="29.1906" style="stroke:#000000;stroke-width:1.2000000000000002;" width="47.2" x="5.6" y="5.6"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="31.2" x="13.6" y="24.4281">index</text><!--MD5=[6e8f311b0aa23032184ffba0ef926f91]
 entity App--><rect fill="#FEFECE" height="29.1906" style="stroke:#000000;stroke-width:1.2000000000000002;" width="38.4" x="10" y="82.4"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="22.4" x="18" y="101.2281">App</text><!--MD5=[58b0dd66ef19f0813ca5dbc778434f73]
 entity routers--><rect fill="#FEFECE" height="29.1906" style="stroke:#000000;stroke-width:1.2000000000000002;" width="56" x="76.4" y="82.4"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="40" x="84.4" y="101.2281">routers</text><!--MD5=[0bb9c21cf77994669bd82826522e1a46]
-entity adapters--><rect fill="#FEFECE" height="29.1906" style="stroke:#000000;stroke-width:1.2000000000000002;" width="64" x="78" y="164.8"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="48" x="86" y="183.6281">adapters</text><path d="M160.4,86.8 L160.4,107.0484 L211.6,107.0484 L211.6,94.8 L203.6,86.8 L160.4,86.8 " fill="#FBFB77" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><path d="M203.6,86.8 L203.6,94.8 L211.6,94.8 L203.6,86.8 " fill="#FBFB77" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="34.4" x="165.2" y="100.8547">UI 部品</text><path d="M60,356 L60,376.2484 L160,376.2484 L160,364 L152,356 L60,356 " fill="#FBFB77" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><path d="M152,356 L152,364 L160,364 L152,356 " fill="#FBFB77" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="83.2" x="64.8" y="370.0547">ビジネスロジック</text><!--MD5=[cf6fc6d90a288299a028151e2059dfbf]
+entity adapters--><rect fill="#FEFECE" height="29.1906" style="stroke:#000000;stroke-width:1.2000000000000002;" width="64" x="78" y="164.8"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="48" x="86" y="183.6281">adapters</text><path d="M160.4,86.8 L160.4,107.0484 L211.6,107.0484 L211.6,94.8 L203.6,86.8 L160.4,86.8 " fill="#FBFB77" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><path d="M203.6,86.8 L203.6,94.8 L211.6,94.8 L203.6,86.8 " fill="#FBFB77" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="34.4" x="165.2" y="100.8547">UI 部品</text><path d="M68.8,356 L68.8,376.2484 L151.2,376.2484 L151.2,364 L143.2,356 L68.8,356 " fill="#FBFB77" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><path d="M143.2,356 L143.2,364 L151.2,364 L143.2,356 " fill="#FBFB77" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="65.6" x="73.6" y="370.0547">UI 以外の部品</text><!--MD5=[cf6fc6d90a288299a028151e2059dfbf]
 link GMN17 to components--><path d="M185.36,106.872 C184.998,112.094 184.514,119.0775 183.9899,126.6393 C183.9244,127.5845 183.8582,128.5387 183.7916,129.4997 C183.775,129.7399 183.7583,129.9806 183.7416,130.2217 " fill="none" id="GMN17-components" style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:7.0,7.0;"/><!--MD5=[c0b237845a10662ab153fdd861487416]
 link index to App--><path d="M29.2,34.592 C29.2,46.784 29.2,64.648 29.2,77.968 " fill="none" id="index-to-App" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><polygon fill="#A80036" points="29.2,82.296,32.4,75.096,29.2,78.296,26,75.096,29.2,82.296" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><!--MD5=[2980d0585f74092fad27cedda57666b0]
 link App to routers--><path d="M48.584,96.8 C56.448,96.8 64.304,96.8 72.168,96.8 " fill="none" id="App-to-routers" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><polygon fill="#A80036" points="76.272,96.8,69.072,93.6,72.272,96.8,69.072,100,76.272,96.8" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><!--MD5=[24cf9cf451d7f1909271b667238ce8f8]
@@ -27,7 +27,7 @@ link slices to usecases--><path d="M256.272,293.6 C264.144,293.6 272.008,293.6 2
 link usecases to gateways--><path d="M348.944,293.6 C356.792,293.6 364.648,293.6 372.504,293.6 " fill="none" id="usecases-to-gateways" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><polygon fill="#A80036" points="376.608,293.6,369.408,290.4,372.608,293.6,369.408,296.8,376.608,293.6" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><!--MD5=[c0557cc87b32abb25ee369a905a6c5f2]
 link adapters to components--><path d="M142.176,179.2 C148.496,179.2 154.816,179.2 161.137,179.2 C164.2975,179.2 167.4583,179.2 170.6194,179.2 C171.4097,179.2 172.2,179.2 172.9903,179.2 C173.1879,179.2 173.3855,179.2 173.583,179.2 C173.6818,179.2 173.7806,179.2 173.8794,179.2 " fill="none" id="adapters-to-components" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><polygon fill="#A80036" points="173.8794,179.2,166.6794,176,169.8794,179.2,166.6794,182.4,173.8794,179.2" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><!--MD5=[34c7576c9e76fc9506a6bd6317603c58]
 link adapters to core--><path d="M110,193.608 C110,200.99 110,210.746 110,221.2605 C110,226.5178 110,231.9646 110,237.3992 C110,238.7578 110,240.1157 110,241.4696 C110,242.1466 110,242.8226 110,243.4972 C110,243.8345 110,244.1715 110,244.5081 " fill="none" id="adapters-to-core" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><polygon fill="#A80036" points="110,244.5081,113.2,237.3081,110,240.5081,106.8,237.3081,110,244.5081" style="stroke:#A80036;stroke-width:0.8000000000000002;"/><!--MD5=[a0bf7e4c18bbe729fef18c9fd8215e88]
-link core to GMN32--><path d="M110,327.3823 C110,327.8004 110,328.219 110,328.6378 C110,331.988 110,335.3521 110,338.6099 C110,345.1255 110,351.216 110,355.92 " fill="none" id="core-GMN32" style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:7.0,7.0;"/><!--MD5=[f2d21ba78b1704275af34675c6df60c4]
+link core to GMN32--><path d="M110,327.3823 C110,327.8004 110,328.219 110,328.6378 C110,331.988 110,335.3521 110,338.6099 C110,345.1255 110,351.216 110,355.92 " fill="none" id="core-GMN32" style="stroke:#A80036;stroke-width:0.8000000000000002;stroke-dasharray:7.0,7.0;"/><!--MD5=[e8ac3bf3e434addde3b68c056b9c9bab]
 @startuml dependencies
 ' title  React サンプルプロジェクト 依存関係図
 skinparam shadowing false
@@ -76,7 +76,7 @@ adapters -> components
 adapters - -> core
 
 note bottom of core
-  ビジネスロジック
+  UI 以外の部品
 end note
 
 @enduml
@@ -127,7 +127,7 @@ adapters -> components
 adapters - -> core
 
 note bottom of core
-  ビジネスロジック
+  UI 以外の部品
 end note
 
 @enduml

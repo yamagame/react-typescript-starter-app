@@ -1,26 +1,29 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-type Size = 'big' | 'small';
+export type SizeType = 'big' | 'small';
+export type FruitType = {
+  apple: boolean;
+  tangerine: boolean;
+  grape: boolean;
+};
 
 export type FormSampleProps = {
   name: string;
-  size: Size;
-  fruit: {
-    apple: boolean;
-    tangerine: boolean;
-    grape: boolean;
-  };
+  size: SizeType;
+  fruit: FruitType;
   blood: string;
   actions: {
     onChangeName: (name: string) => void;
-    onChangeSize: (size: Size) => void;
+    onChangeSize: (size: SizeType) => void;
     onChangeFruit: (fruit: string, value: boolean) => void;
     onChagenBlood: (blood: string) => void;
+    onSubmit: () => void;
   };
 };
 
 export function FormSample(props: FormSampleProps) {
   const { name, actions, size, fruit, blood } = props;
+  const navigate = useNavigate();
   return (
     <>
       <div>
@@ -93,8 +96,8 @@ export function FormSample(props: FormSampleProps) {
         </select>
       </div>
       <div>
-        <input type="button" value="戻る" onClick={() => {}} />
-        <input type="submit" value="OK" onClick={() => {}} />
+        <input type="button" value="戻る" onClick={() => navigate(-1)} />
+        <input type="submit" value="OK" onClick={() => actions.onSubmit()} />
       </div>
     </>
   );

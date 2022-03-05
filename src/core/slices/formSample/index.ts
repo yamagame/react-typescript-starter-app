@@ -1,20 +1,21 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../store';
 
-type SizeType = 'big' | 'small';
+type Size = 'big' | 'small';
+type Fruit = {
+  apple: boolean;
+  tangerine: boolean;
+  grape: boolean;
+};
 
-export interface ArticleState {
+export interface State {
   name: string;
-  size: SizeType;
+  size: Size;
   blood: string;
-  fruit: {
-    apple: boolean;
-    tangerine: boolean;
-    grape: boolean;
-  };
+  fruit: Fruit;
 }
 
-const initialState: ArticleState = {
+const initialState: State = {
   name: '',
   size: 'big',
   blood: 'A',
@@ -32,7 +33,7 @@ export const formSampleSlice = createSlice({
     setName: (state, action: PayloadAction<string>) => {
       state.name = action.payload;
     },
-    setSize: (state, action: PayloadAction<SizeType>) => {
+    setSize: (state, action: PayloadAction<Size>) => {
       state.size = action.payload;
     },
     setBlood: (state, action: PayloadAction<string>) => {
