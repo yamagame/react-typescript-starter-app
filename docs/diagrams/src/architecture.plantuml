@@ -38,6 +38,14 @@ rectangle App
 rectangle routers
 rectangle adapters
 
+note top of components
+  UI 部品
+end note
+
+note top of core
+  UI 以外の部品
+end note
+
 package components {
   rectangle pages
   rectangle organisms
@@ -53,27 +61,29 @@ package core {
   rectangle usecases
 }
 
-note top of components
-  UI 部品
-end note
-
-index --> App
+index -> App
 App -> routers
 routers --> adapters
-pages -> templates
-organisms -> molecules
-molecules -> atoms
-templates -> organisms
+pages --> templates
+organisms --> molecules
+molecules --> atoms
+templates --> organisms
 
-store -> slices
-slices -> usecases
-usecases -> gateways
+store --> slices
+slices --> usecases
+usecases --> gateways
 
-adapters -> components
+adapters --> components
 adapters --> core
 
-note bottom of core
-  UI 以外の部品
-end note
+package modules {
+  rectangle react
+  rectangle "react-redux"
+  rectangle "react-router-dom"
+  rectangle "etc..."
+}
+
+core ----> modules
+components ----> modules
 
 @enduml
