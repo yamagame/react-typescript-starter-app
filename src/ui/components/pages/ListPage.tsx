@@ -19,6 +19,9 @@ export function ListPage(props: Props) {
       <div>
         <Link to={`/form`}>Form</Link>
       </div>
+      <div>
+        <Link to={`/form-formik`}>Form-Formik</Link>
+      </div>
       {pages.map((page) => (
         <div key={page.id}>
           <Link to={`/article/${page.id}`}>{page.title}</Link>
