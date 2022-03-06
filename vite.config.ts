@@ -12,7 +12,7 @@ export default defineConfig(async ({ command, mode }) => {
     server: {
       hmr: { overlay: false },
       proxy: {
-        '/pages': 'http://localhost:4000',
+        '/api': 'http://localhost:4000',
       },
     },
     resolve: {

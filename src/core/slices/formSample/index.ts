@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from '../../store';
 
 type Size = 'big' | 'small';
 type Fruit = {
@@ -50,8 +49,6 @@ export const formSampleSlice = createSlice({
     },
   },
 });
-
-export const selectState = (state: RootState) => state.formSample;
 
 export const actions = {
   ...formSampleSlice.actions,

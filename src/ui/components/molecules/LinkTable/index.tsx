@@ -8,7 +8,7 @@ export const LinkTable = (props: Props) => {
   return (
     <>
       {props.urls.map((v) => (
-        <div>
+        <div key={v.url}>
           <Link to={v.url}>{v.title}</Link>
         </div>
       ))}

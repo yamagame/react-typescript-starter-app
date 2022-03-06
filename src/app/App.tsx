@@ -1,13 +1,13 @@
 import React from 'react';
 import { useAppDispatch } from 'core/store';
-import { fetchPagesAsync } from 'core/gateways/article';
+import { actions } from 'core/slices/article';
 import { AppRouter } from 'routers/ApplicationRouter';
 
 export function App() {
   const dispatch = useAppDispatch();
 
   React.useEffect(() => {
-    dispatch(fetchPagesAsync());
+    dispatch(actions.fetchPagesAsync());
   }, [dispatch]);
 
   return <AppRouter />;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAppSelector, useAppDispatch } from 'core/store';
-import { selectCount } from 'core/slices/counter';
+import { selectors } from 'core/store/selectors';
 import { CounterPage } from 'ui/components/pages/CounterPage';
 import { actions } from 'core/slices/counter';
 
@@ -24,7 +24,7 @@ const cardData = {
 };
 
 export function CounterAdapter() {
-  const count = useAppSelector(selectCount);
+  const { value: count } = useAppSelector(selectors.counter);
   const dispatch = useAppDispatch();
   const cards = React.useMemo(
     () =>

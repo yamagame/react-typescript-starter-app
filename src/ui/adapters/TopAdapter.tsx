@@ -1,5 +1,5 @@
 import { useAppSelector } from 'core/store';
-import { selectState } from 'core/slices/article';
+import { selectors } from 'core/store/selectors';
 import { ListPage } from 'ui/components/pages/ListPage';
 
 const urls = [
@@ -7,9 +7,10 @@ const urls = [
   { url: `/form`, title: 'Form' },
   { url: `/form-formik`, title: 'Form-Formik' },
   { url: `/my-page`, title: 'MyPage' },
+  { url: `/todo`, title: 'ToDoPage' },
 ];
 
 export function TopAdapter() {
-  const { pages } = useAppSelector(selectState);
+  const { pages } = useAppSelector(selectors.article);
   return <ListPage urls={urls} pages={pages} />;
 }

@@ -1,6 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { RootState } from '../../store';
-import { Article, fetchPagesAsync } from 'core/gateways/article';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { Article, getPagesAsync } from 'core/gateways/article';
 
 export interface ArticleState {
   status: string;
@@ -21,6 +20,10 @@ export const articleSlice = createSlice({
       .addCase(fetchPagesAsync.pending, (state) => {
         state.status = 'loading';
       })
+      .addCase(fetchPagesAsync.rejected, (state, action) => {
+        console.error(action.error);
+        state.status = 'error';
+      })
       .addCase(fetchPagesAsync.fulfilled, (state, action) => {
         state.status = 'idle';
         state.pages = action.payload;
@@ -28,6 +31,17 @@ export const articleSlice = createSlice({
   },
 });
 
-export const selectState = (state: RootState) => state.article;
+const fetchPagesAsync = createAsyncThunk(
+  'article/fetchPagesAsync',
+  async () => {
+    const response = await getPagesAsync();
+    return response.json();
+  }
+);
+
+export const actions = {
+  ...articleSlice.actions,
+  fetchPagesAsync,
+};
 
 export default articleSlice.reducer;
