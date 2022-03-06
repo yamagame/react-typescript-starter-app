@@ -1,7 +1,7 @@
-import counterReducer from '../slices/counter';
-import articleReducer from '../slices/article';
-import formSampleReducer from '../slices/formSample';
-import todoReducer from '../slices/todo';
+import counterReducer from 'core/slices/counter';
+import articleReducer from 'core/slices/article';
+import formSampleReducer from 'core/slices/formSample';
+import todoReducer from 'core/slices/todo';
 
 export const reducer = {
   counter: counterReducer,
