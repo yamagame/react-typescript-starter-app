@@ -76,6 +76,11 @@ usecases --> gateways
 adapters --> components
 adapters --> core
 
+note bottom of modules
+  ビジネスロジックを含まない
+  モジュール
+end note
+
 package modules {
   rectangle react
   rectangle "react-redux"
