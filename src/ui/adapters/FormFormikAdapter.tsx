@@ -2,14 +2,14 @@ import { FormPage } from 'ui/components/pages/FormPage';
 import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import {
-  SizeType as FormSampleSizeType,
-  FruitType as FormSampleFruitType,
+  FormSampleSize,
+  FormSampleFruit,
 } from 'ui/components/organisms/FormSample';
 
 type FormProps = {
-  size: FormSampleSizeType;
+  size: FormSampleSize;
   name: string;
-  fruit: FormSampleFruitType;
+  fruit: FormSampleFruit;
   blood: string;
 };
 

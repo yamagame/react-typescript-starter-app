@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
-export type SizeType = 'big' | 'small';
-export type FruitType = {
+export type FormSampleSize = 'big' | 'small';
+export type FormSampleFruit = {
   apple: boolean;
   tangerine: boolean;
   grape: boolean;
@@ -9,12 +9,12 @@ export type FruitType = {
 
 export type FormSampleProps = {
   name: string;
-  size: SizeType;
-  fruit: FruitType;
+  size: FormSampleSize;
+  fruit: FormSampleFruit;
   blood: string;
   actions: {
     onChangeName: (name: string) => void;
-    onChangeSize: (size: SizeType) => void;
+    onChangeSize: (size: FormSampleSize) => void;
     onChangeFruit: (fruit: string, value: boolean) => void;
     onChagenBlood: (blood: string) => void;
     onSubmit: () => void;
