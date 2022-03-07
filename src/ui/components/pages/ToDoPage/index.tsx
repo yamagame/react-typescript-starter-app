@@ -1,6 +1,11 @@
 import React from 'react';
 import { MainTemplate } from 'ui/components/templates/MainTemplate';
-import { Button } from 'ui/components/atoms/Button';
+import {
+  ToDoForm,
+  FormProps as ToDoFormProps,
+} from 'ui/components/molecules/ToDoForm';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
 
 export type ToDo = { id: string; todo: string; checked: boolean };
 
@@ -13,25 +18,32 @@ export type Props = {
   };
 };
 
+type FormProps = ToDoFormProps;
+
 export function ToDoPage(props: Props) {
   const { todos, actions, status } = props;
-  const [todoText, setTodoText] = React.useState('');
+  const formik = useFormik<FormProps>({
+    initialValues: {
+      text: '',
+    },
+    // validate: (values) => {
+    //   console.log(values);
+    // },
+    validationSchema: Yup.object().shape({
+      text: Yup.string().required('ToDo is a required field'),
+    }),
+    onSubmit: (values) => {
+      actions.onClickToDoAdd(values.text);
+      formik.setValues({ text: '' });
+      formik.setTouched({ text: false });
+    },
+  });
   return (
     <MainTemplate header="ToDo">
       <p>{status ? status : null}</p>
-      <input
-        type="text"
-        onChange={(e) => setTodoText(e.target.value)}
-        value={todoText}
-      />
-      <Button
-        label="Add"
-        onClick={() => {
-          actions.onClickToDoAdd(todoText);
-          setTodoText('');
-        }}
-        size="large"
-      />
+      <form onSubmit={formik.handleSubmit}>
+        <ToDoForm formik={formik} />
+      </form>
       {todos.map((v) => (
         <div key={v.id}>
           {v.todo}
