@@ -5,21 +5,19 @@
     + src
     ++ <color:#00A1FF>**app** | アプリケーションを構成するトップレベルのソースコード
     +++ App.tsx
+    ++ <color:#00A1FF>**components** | React のコンポーネント
+    +++ atoms
+    +++ molecules
+    +++ organisms
+    +++ pages
+    +++ templates
+    ++ <color:#00A1FF>**config** | アプリケーションの設定
     ++ <color:#00A1FF>**core** | React コンポーネント以外のビジネスロジックを含むソースコード
     +++ gateways | 外部リソースとの接続用モジュール
-    +++ slices | React のスライス
-    +++ store | React のストア
-    +++ usecase | アプリケーションのユースケース
+    ++ <color:#00A1FF>**features** | ロジックと関連するコンポーネント
     ++ <color:#00A1FF>**routers** | ルーター
+    ++ <color:#00A1FF>**store** | React のストア
     ++ stories | Storybook 関連ファイル
-    ++ <color:#00A1FF>**ui** | React のコンポーネント
-    +++ adapters | ビジネスロジックとの接続用コンポーネント
-    +++ components | Atomic Desgin に沿ったビジネスロジックを含まない再利用可能なコンポーネント
-    ++++ atoms
-    ++++ molecules
-    ++++ organisms
-    ++++ pages
-    ++++ templates
     ++ index.tsx | React エントリーポイント
   }
 }
@@ -33,10 +31,15 @@ scale 0.8
 
 skinparam packageStyle Rectangle
 
+rectangle config
+
+note top of config
+  設定値
+end note
+
 rectangle index
 rectangle App
 rectangle routers
-rectangle adapters
 
 note top of components
   UI 部品
@@ -54,41 +57,36 @@ package components {
   rectangle templates
 }
 
+rectangle store
+
+package features {
+  rectangle slice...
+}
+
+note bottom of features
+  ビジネスロジック関連の部品
+  Action、Reducer、React コンポーネントも含む
+end note
+
 package core {
   rectangle gateways
-  rectangle slices
-  rectangle store
-  rectangle usecases
 }
 
 index -> App
-App -> routers
-routers --> adapters
+App --> routers
+routers --> features
 pages --> templates
 organisms --> molecules
 molecules --> atoms
 templates --> organisms
 
-store --> slices
-slices --> usecases
-usecases --> gateways
+store --> features
 
-adapters --> components
-adapters --> core
+features --> components
+features --> core
+index --> store
 
-note bottom of modules
-  ビジネスロジックを含まない
-  モジュール
-end note
-
-package modules {
-  rectangle react
-  rectangle "react-redux"
-  rectangle "react-router-dom"
-  rectangle "etc..."
-}
-
-core ----> modules
-components ----> modules
+features --> config
+core --> config
 
 @enduml

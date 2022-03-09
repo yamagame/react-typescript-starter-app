@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Appの表示 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <h1>
+      ListPage
+    </h1>
+    <p>
+      1.0.0
+    </p>
+    <div>
+      <a
+        href="/counter"
+      >
+        Counter
+      </a>
+    </div>
+    <div>
+      <a
+        href="/form"
+      >
+        Form
+      </a>
+    </div>
+    <div>
+      <a
+        href="/form-formik"
+      >
+        Form-Formik
+      </a>
+    </div>
+    <div>
+      <a
+        href="/my-page"
+      >
+        MyPage
+      </a>
+    </div>
+    <div>
+      <a
+        href="/todo"
+      >
+        ToDoPage
+      </a>
+    </div>
+  </div>
+</div>
+`;

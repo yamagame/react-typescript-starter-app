@@ -1,12 +1,12 @@
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { store } from 'store';
-import { App } from 'app/App';
+import { AppLink } from '.';
 
-test('Appの表示', () => {
+test('AppLinkの表示', () => {
   const { container } = render(
     <Provider store={store}>
-      <App />
+      <AppLink href="string" name="string" />
     </Provider>
   );
 

@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path/posix';
 import { getDirsAsync } from './vite-utils/index';
+import 'dotenv/config';
 
 const baseDir = 'src';
 
@@ -17,9 +18,15 @@ export default defineConfig(async ({ command, mode }) => {
     },
     resolve: {
       alias: {
-        App: path.resolve(__dirname, path.join(baseDir, 'App')),
-        'App.css': path.resolve(__dirname, path.join(baseDir, 'App.css')),
         ...dirs,
+      },
+    },
+    define: {
+      'process.env': {
+        ...Object.entries(process.env).reduce((sum, [key, val]) => {
+          if (key.indexOf('REACT_APP') === 0) sum[key] = val;
+          return sum;
+        }, {}),
       },
     },
   };

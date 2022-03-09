@@ -1,6 +1,6 @@
 import React from 'react';
-import { useAppDispatch } from 'core/store';
-import { actions } from 'core/slices/article';
+import { useAppDispatch } from 'store';
+import { actions } from 'features/article';
 import { AppRouter } from 'routers/ApplicationRouter';
 
 export function App() {
