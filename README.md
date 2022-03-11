@@ -4,7 +4,21 @@
 
 ![Directory](docs/diagrams/out/architecture/directory.svg 'Directory')
 
-### 依存関係
+### 依存関係(Mermaid)
+
+```mermaid
+stateDiagram
+  direction LR
+  index --> App
+  index --> store
+  App --> routers
+  store --> features
+  routers --> features
+  features --> components
+  features --> core
+```
+
+### 依存関係(PlantUML)
 
 ![Dependencies](docs/diagrams/out/architecture/dependencies.svg 'Dependencies')
 
