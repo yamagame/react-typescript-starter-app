@@ -35,14 +35,14 @@ export const todoSlice = createSlice({
   extraReducers: (builder) => {
     builder
       // -----------------------------------------------
-      .addCase(fetchToDoAsync.pending, (state) => {
+      .addCase(initToDoAsync.pending, (state) => {
         state.status = 'loading';
       })
-      .addCase(fetchToDoAsync.fulfilled, (state, action) => {
+      .addCase(initToDoAsync.fulfilled, (state, action) => {
         state.status = 'idle';
         state.todos = action.payload.data;
       })
-      .addCase(fetchToDoAsync.rejected, (state) => {
+      .addCase(initToDoAsync.rejected, (state) => {
         state.status = 'error';
       })
       // -----------------------------------------------
@@ -73,8 +73,8 @@ export const todoSlice = createSlice({
   },
 });
 
-const fetchToDoAsync = createAsyncThunk(
-  'todo/fetchToDoAsync',
+const initToDoAsync = createAsyncThunk(
+  'todo/initToDoAsync',
   async (_, thunkAPI) => {
     const res = await getTodoAsync({});
     if (res.status !== 200) return thunkAPI.rejectWithValue(res);
@@ -102,7 +102,7 @@ const updateToDoAsync = createAsyncThunk(
 
 export const actions = {
   ...todoSlice.actions,
-  fetchToDoAsync,
+  initToDoAsync,
   createToDoAsync,
   updateToDoAsync,
 };

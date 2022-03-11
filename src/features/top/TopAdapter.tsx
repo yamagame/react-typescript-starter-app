@@ -8,6 +8,7 @@ const urls = [
   { url: `/form-formik`, title: 'Form-Formik' },
   { url: `/my-page`, title: 'MyPage' },
   { url: `/todo`, title: 'ToDoPage' },
+  { url: `/todo-counter`, title: 'ToDoCounter' },
 ];
 
 export function TopAdapter() {

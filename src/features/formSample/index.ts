@@ -26,7 +26,7 @@ const initialState: State = {
 };
 
 export const formSampleSlice = createSlice({
-  name: 'formSample',
+  name: 'form-sample',
   initialState,
   reducers: {
     setName: (state, action: PayloadAction<string>) => {

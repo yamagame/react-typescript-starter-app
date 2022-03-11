@@ -22,7 +22,7 @@ export function ToDoAdapter() {
   );
 
   React.useEffect(() => {
-    dispatch(actions.fetchToDoAsync());
+    dispatch(actions.initToDoAsync());
   }, [dispatch]);
 
   return (
