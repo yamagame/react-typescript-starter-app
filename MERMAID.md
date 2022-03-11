@@ -1,15 +1,20 @@
 ```mermaid
-graph TD;
+stateDiagram
   app --> store
   app --> routers
   routers --> features
   store --> features
-  subgraph components
+  state components {
+    [*] --> pages
     pages --> templates
     templates --> organisms
     organisms --> molecules
     molecules --> atoms
-  end
-  features --> pages
+  }
+  features --> components
   features --> core
+  state core {
+    [*] --> gateways
+    gateways
+  }
 ```
