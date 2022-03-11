@@ -16,6 +16,8 @@ stateDiagram
   routers --> features
   features --> components
   features --> core
+  features --> config
+  core --> config
 ```
 
 ### 依存関係(PlantUML)
