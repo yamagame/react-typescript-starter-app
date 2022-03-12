@@ -5,6 +5,7 @@ import { FormAdapter } from 'features/formSample/FormAdapter';
 import { FormFormikAdapter } from 'features/formSample/FormFormikAdapter';
 import { ArticleAdapter } from 'features/article/ArticleAdapter';
 import { MyPageAdapter } from 'features/mypage/MyPageAdapter';
+import { TestPageAdapter } from 'features/testpage/TestPageAdapter';
 import { ToDoAdapter } from 'features/todo/ToDoAdapter';
 import { ToDoCounterAdapter } from 'features/todoCounter/ToDoCounterAdapter';
 
@@ -22,6 +23,8 @@ export function AppRouter() {
         <Route path={'/form-formik'} element={<FormFormikAdapter />} />
         {/*-------------- マイページ */}
         <Route path={'/my-page'} element={<MyPageAdapter />} />
+        {/*-------------- テストページ */}
+        <Route path={'/test-page'} element={<TestPageAdapter />} />
         {/*-------------- ToDOページ */}
         <Route path={'/todo'} element={<ToDoAdapter />} />
         {/*-------------- ToDOページ */}

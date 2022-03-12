@@ -1,3 +1,3 @@
 import { RootState } from 'store';
 
-export const maypageSelector = (state: RootState) => state.mayPage;
+export const mypageSelector = (state: RootState) => state.myPage;

@@ -1,19 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export interface MyPageState {
+export interface TestPageState {
   count: number;
 }
 
-const initialState: MyPageState = {
-  count: 0,
+const initialState: TestPageState = {
+  count: 1,
 };
 
-export const myPageSlice = createSlice({
-  name: 'mypage',
+export const testPageSlice = createSlice({
+  name: 'testpage',
   initialState,
   reducers: {
     increment: (state) => {
       state.count += 1;
+    },
+    double: (state) => {
+      state.count *= 2;
     },
     decrement: (state) => {
       if (state.count > 0) state.count -= 1;
@@ -22,7 +25,7 @@ export const myPageSlice = createSlice({
 });
 
 export const actions = {
-  ...myPageSlice.actions,
+  ...testPageSlice.actions,
 };
 
-export default myPageSlice.reducer;
+export default testPageSlice.reducer;

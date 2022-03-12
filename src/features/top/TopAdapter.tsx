@@ -7,6 +7,7 @@ const urls = [
   { url: `/form`, title: 'Form' },
   { url: `/form-formik`, title: 'Form-Formik' },
   { url: `/my-page`, title: 'MyPage' },
+  { url: `/test-page`, title: 'TestPage' },
   { url: `/todo`, title: 'ToDoPage' },
   { url: `/todo-counter`, title: 'ToDoCounter' },
 ];

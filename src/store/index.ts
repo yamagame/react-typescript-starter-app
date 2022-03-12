@@ -6,7 +6,8 @@ import counterReducer from 'features/counter';
 import articleReducer from 'features/article';
 import formSampleReducer from 'features/formSample';
 import todoReducer from 'features/todo';
-import mayPageSlice from 'features/mypage';
+import myPageReducer from 'features/mypage';
+import testPageReducer from 'features/testpage';
 import todoCounterReducer from 'features/todoCounter';
 
 import { applicationSelector } from 'features/application/selector';
@@ -36,7 +37,8 @@ export const store = configureStore({
     article: articleReducer,
     formSample: formSampleReducer,
     todo: todoReducer,
-    mayPage: mayPageSlice,
+    myPage: myPageReducer,
+    testPage: testPageReducer,
     todoCounter: todoCounterReducer,
   },
 });
