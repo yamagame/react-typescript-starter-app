@@ -11,7 +11,14 @@ const initialState: MyPageState = {
 export const mayPageSlice = createSlice({
   name: 'mypage',
   initialState,
-  reducers: {},
+  reducers: {
+    increment: (state) => {
+      state.count += 1;
+    },
+    decrement: (state) => {
+      if (state.count > 0) state.count -= 1;
+    },
+  },
 });
 
 export const actions = {
