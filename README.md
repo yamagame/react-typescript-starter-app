@@ -9,13 +9,28 @@
 ```mermaid
 stateDiagram
   direction LR
-  index --> App
+  index --> app
   index --> store
-  App --> routers
-  store --> features
+  app --> routers
+  app --> store
+  app --> features
   routers --> features
+  store --> features
+  state components {
+    direction LR
+    [*] --> pages
+    pages --> templates
+    templates --> organisms
+    organisms --> molecules
+    molecules --> atoms
+  }
   features --> components
   features --> core
+  state core {
+    direction LR
+    [*] --> gateways
+    gateways
+  }
   features --> config
   core --> config
 ```
