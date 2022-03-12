@@ -10,27 +10,27 @@
 stateDiagram
   direction LR
   index --> app
+  app --> store
   index --> store
   app --> routers
-  app --> store
   app --> features
   routers --> features
   store --> features
-  state components {
-    direction LR
-    [*] --> pages
-    pages --> templates
-    templates --> organisms
-    organisms --> molecules
-    molecules --> atoms
-  }
+  %% state components {
+  %%   direction LR
+  %%   [*] --> pages
+  %%   pages --> templates
+  %%   templates --> organisms
+  %%   organisms --> molecules
+  %%   molecules --> atoms
+  %% }
   features --> components
   features --> core
-  state core {
-    direction LR
-    [*] --> gateways
-    gateways
-  }
+  %% state core {
+  %%   direction LR
+  %%   [*] --> gateways
+  %%   gateways
+  %% }
   features --> config
   core --> config
 ```
