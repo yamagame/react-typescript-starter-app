@@ -3,7 +3,8 @@ import {
   ToDoCounterPage,
   ToDoCounterPageProps,
 } from 'components/pages/ToDoCounterPage';
-import { useAppDispatch, useAppSelector, selectors } from 'store';
+import { useAppDispatch, useAppSelector } from 'store';
+import { selectors } from 'core/selectors';
 import { actions as todoCounterActions } from 'features/todoCounter';
 import { actions as todoActions } from 'features/todo';
 import { useTemplateProps } from 'features/utils';

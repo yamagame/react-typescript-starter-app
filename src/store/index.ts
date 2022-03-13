@@ -10,13 +10,6 @@ import myPageReducer from 'features/mypage';
 import testPageReducer from 'features/testpage';
 import todoCounterReducer from 'features/todoCounter';
 
-import { applicationSelector } from 'features/application/selector';
-import { articleSelector } from 'features/article/selector';
-import { counterSelector } from 'features/counter/selector';
-import { formSampleSelector } from 'features/formSample/selector';
-import { todoSelector } from 'features/todo/selector';
-import { todoCounterSelector } from 'features/todoCounter/selector';
-
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
 export type AppThunk<ReturnType = void> = ThunkAction<
@@ -42,13 +35,3 @@ export const store = configureStore({
     todoCounter: todoCounterReducer,
   },
 });
-
-// ----------------------------------------------- selectors
-export const selectors = {
-  application: applicationSelector,
-  article: articleSelector,
-  counter: counterSelector,
-  formSample: formSampleSelector,
-  todo: todoSelector,
-  todoCounter: todoCounterSelector,
-};

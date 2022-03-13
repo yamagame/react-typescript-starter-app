@@ -1,4 +1,5 @@
-import { useAppSelector, selectors } from 'store';
+import { useAppSelector } from 'store';
+import { selectors } from 'core/selectors';
 import { ListPage } from 'components/pages/ListPage';
 import { useTemplateProps } from 'features/utils';
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import { useAppSelector, useAppDispatch, selectors } from 'store';
+import { useAppSelector, useAppDispatch } from 'store';
+import { selectors } from 'core/selectors';
 import { CounterPage } from 'components/pages/CounterPage';
 import { actions } from 'features/counter';
 import { useTemplateProps } from 'features/utils';

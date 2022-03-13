@@ -1,5 +1,5 @@
 import React from 'react';
-import 'app/App.css';
+import './index.css';
 
 export type MainTemplateProps = {
   header?: string;

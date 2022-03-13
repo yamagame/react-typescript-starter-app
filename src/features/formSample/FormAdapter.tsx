@@ -1,6 +1,7 @@
 import { FormPage } from 'components/pages/FormPage';
 import { useNavigate } from 'react-router-dom';
-import { useAppSelector, useAppDispatch, selectors } from 'store';
+import { useAppSelector, useAppDispatch } from 'store';
+import { selectors } from 'core/selectors';
 import { actions } from 'features/formSample';
 import { useTemplateProps } from 'features/utils';
 
