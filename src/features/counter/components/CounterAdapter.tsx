@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAppSelector, useAppDispatch } from 'store';
-import { counterSelector } from './selector';
+import { counterSelector } from '../selector';
 import { CounterPage } from 'components/pages/CounterPage';
 import { actions } from 'features/counter';
 import { useTemplateProps } from 'features/utils';

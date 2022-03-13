@@ -4,7 +4,7 @@ import {
   ToDoCounterPageProps,
 } from 'components/pages/ToDoCounterPage';
 import { useAppDispatch, useAppSelector } from 'store';
-import { todoCounterSelector } from './selector';
+import { todoCounterSelector } from '../selector';
 import { actions as todoCounterActions } from 'features/todoCounter';
 import { actions as todoActions } from 'features/todo';
 import { useTemplateProps } from 'features/utils';

@@ -1,15 +1,15 @@
 import { MyPage } from 'components/pages/MyPage';
 import { useTemplateProps } from 'features/utils';
 import { useAppSelector, useAppDispatch } from 'store';
-import { mypageSelector } from './selector';
-import { actions } from '.';
+import { testpageSelector } from '../selector';
+import { actions } from '../';
 
-export function MyPageAdapter() {
+export function TestPageAdapter() {
   const dispatch = useAppDispatch();
   const template = useTemplateProps();
-  const { count } = useAppSelector(mypageSelector);
+  const { count } = useAppSelector(testpageSelector);
   const onClickPlus = () => {
-    dispatch(actions.increment());
+    dispatch(actions.double());
   };
   const onClickMinus = () => {
     dispatch(actions.decrement());

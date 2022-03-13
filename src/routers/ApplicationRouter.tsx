@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { CounterAdapter } from 'features/counter/CounterAdapter';
+import { CounterAdapter } from 'features/counter/components/CounterAdapter';
 import { TopAdapter } from 'features/top/TopAdapter';
-import { FormAdapter } from 'features/formSample/FormAdapter';
-import { FormFormikAdapter } from 'features/formSample/FormFormikAdapter';
-import { ArticleAdapter } from 'features/article/ArticleAdapter';
-import { MyPageAdapter } from 'features/mypage/MyPageAdapter';
-import { TestPageAdapter } from 'features/testpage/TestPageAdapter';
-import { ToDoAdapter } from 'features/todo/ToDoAdapter';
-import { ToDoCounterAdapter } from 'features/todoCounter/ToDoCounterAdapter';
+import { FormAdapter } from 'features/formSample/components/FormAdapter';
+import { FormFormikAdapter } from 'features/formSample/components/FormFormikAdapter';
+import { ArticleAdapter } from 'features/article/components/ArticleAdapter';
+import { MyPageAdapter } from 'features/mypage/components/MyPageAdapter';
+import { TestPageAdapter } from 'features/testpage/components/TestPageAdapter';
+import { ToDoAdapter } from 'features/todo/components/ToDoAdapter';
+import { ToDoCounterAdapter } from 'features/todoCounter/components/ToDoCounterAdapter';
 
 export function AppRouter() {
   return (

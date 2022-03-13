@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useAppSelector } from 'store';
-import { articleSelector } from './selector';
+import { articleSelector } from '../selector';
 import { ArticlePage } from 'components/pages/ArticlePage';
 import { useTemplateProps } from 'features/utils';
 

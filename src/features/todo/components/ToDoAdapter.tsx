@@ -1,7 +1,7 @@
 import React from 'react';
 import { ToDoPage } from 'components/pages/ToDoPage';
 import { useAppDispatch, useAppSelector } from 'store';
-import { todoSelector } from './selector';
+import { todoSelector } from '../selector';
 import { actions, ToDo } from 'features/todo';
 import { useTemplateProps } from 'features/utils';
 
