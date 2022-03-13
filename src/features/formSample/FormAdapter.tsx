@@ -1,13 +1,13 @@
 import { FormPage } from 'components/pages/FormPage';
 import { useNavigate } from 'react-router-dom';
 import { useAppSelector, useAppDispatch } from 'store';
-import { selectors } from 'core/selectors';
+import { formSampleSelector } from './selector';
 import { actions } from 'features/formSample';
 import { useTemplateProps } from 'features/utils';
 
 export function FormAdapter() {
   const template = useTemplateProps();
-  const state = useAppSelector(selectors.formSample);
+  const state = useAppSelector(formSampleSelector);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   return (

@@ -4,7 +4,7 @@ import {
   ToDoCounterPageProps,
 } from 'components/pages/ToDoCounterPage';
 import { useAppDispatch, useAppSelector } from 'store';
-import { selectors } from 'core/selectors';
+import { todoCounterSelector } from './selector';
 import { actions as todoCounterActions } from 'features/todoCounter';
 import { actions as todoActions } from 'features/todo';
 import { useTemplateProps } from 'features/utils';
@@ -12,7 +12,7 @@ import { useTemplateProps } from 'features/utils';
 export function ToDoCounterAdapter() {
   const dispatch = useAppDispatch();
   const template = useTemplateProps();
-  const { todo, count } = useAppSelector(selectors.todoCounter);
+  const { todo, count } = useAppSelector(todoCounterSelector);
 
   const todoCounterProps: ToDoCounterPageProps = React.useMemo(
     () => ({

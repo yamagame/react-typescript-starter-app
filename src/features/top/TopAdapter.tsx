@@ -1,5 +1,5 @@
 import { useAppSelector } from 'store';
-import { selectors } from 'core/selectors';
+import { articleSelector } from 'features/article/selector';
 import { ListPage } from 'components/pages/ListPage';
 import { useTemplateProps } from 'features/utils';
 
@@ -15,6 +15,6 @@ const urls = [
 
 export function TopAdapter() {
   const template = useTemplateProps();
-  const { pages } = useAppSelector(selectors.article);
+  const { pages } = useAppSelector(articleSelector);
   return <ListPage urls={urls} pages={pages} template={template} />;
 }

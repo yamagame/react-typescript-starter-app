@@ -1,14 +1,14 @@
 import React from 'react';
 import { ToDoPage } from 'components/pages/ToDoPage';
 import { useAppDispatch, useAppSelector } from 'store';
-import { selectors } from 'core/selectors';
+import { todoSelector } from './selector';
 import { actions, ToDo } from 'features/todo';
 import { useTemplateProps } from 'features/utils';
 
 export function ToDoAdapter() {
   const template = useTemplateProps();
   const dispatch = useAppDispatch();
-  const { todos, status } = useAppSelector(selectors.todo);
+  const { todos, status } = useAppSelector(todoSelector);
 
   const callbacks = React.useMemo(
     () => ({

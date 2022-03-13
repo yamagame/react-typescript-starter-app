@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAppSelector, useAppDispatch } from 'store';
-import { selectors } from 'core/selectors';
+import { counterSelector } from './selector';
 import { CounterPage } from 'components/pages/CounterPage';
 import { actions } from 'features/counter';
 import { useTemplateProps } from 'features/utils';
@@ -26,7 +26,7 @@ const cardData = {
 
 export function CounterAdapter() {
   const template = useTemplateProps();
-  const { value: count } = useAppSelector(selectors.counter);
+  const { value: count } = useAppSelector(counterSelector);
   const dispatch = useAppDispatch();
   const cards = React.useMemo(
     () =>
