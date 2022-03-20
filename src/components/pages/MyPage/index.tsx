@@ -1,9 +1,9 @@
-import React from 'react';
 import {
   MainTemplate,
   MainTemplateProps,
 } from 'components/templates/MainTemplate';
 import { Button } from 'components/atoms/Button';
+import { useComponentState } from './component-state';
 
 export type MyPageProps = {
   count: number;
@@ -14,39 +14,8 @@ export type MyPageProps = {
 };
 
 export function MyPage(props: MyPageProps) {
-  const [timerEnabled, setTimerEnabled] = React.useState(false);
-  const [message, setMessage] = React.useState('Hello World!');
   const { count } = props;
-  React.useEffect(
-    function oddOrEven() {
-      const countStr = `${count}`;
-      if (count > 0 && (countStr.indexOf('3') >= 0 || count % 3 === 0)) {
-        setMessage('アホです');
-      } else if (count % 2) {
-        setMessage('奇数です');
-      } else {
-        setMessage('偶数です');
-      }
-    },
-    [count]
-  );
-  React.useEffect(
-    function startTimer() {
-      console.log(`## call start timer ${timerEnabled ? 'true' : 'false'}`);
-      let timer: ReturnType<typeof setInterval> | undefined;
-      if (timerEnabled) {
-        timer = setInterval(function countUp() {
-          props.onClickPlus();
-        }, 1000);
-        console.log(`start timer ${timer}`);
-      }
-      return function clearTimer() {
-        if (timer) clearInterval(timer);
-        console.log(`clear timer ${timer}`);
-      };
-    },
-    [timerEnabled]
-  );
+  const state = useComponentState(props);
   return (
     <MainTemplate {...props.template} header="MyPage">
       <p>これはマイページです。</p>
@@ -55,18 +24,18 @@ export function MyPage(props: MyPageProps) {
         カウンタ : {count} 個
         <Button label="+" onClick={props.onClickPlus} />
       </p>
-      {timerEnabled ? 'true' : 'false'}
+      {state.timerEnabled ? 'true' : 'false'}
       <input
         type="button"
         onClick={function startCountUp() {
-          setTimerEnabled(true);
+          state.setTimerEnabled(true);
         }}
         value="COUNT UP"
       />
       <input
         type="button"
         onClick={function stopCountUp() {
-          setTimerEnabled(false);
+          state.setTimerEnabled(false);
         }}
         value="STOP"
       />
@@ -77,18 +46,18 @@ export function MyPage(props: MyPageProps) {
         }}
         value="RESET"
       />
-      <div>{message}</div>
+      <div>{state.message}</div>
       <input
         type="button"
         onClick={function onClick() {
-          setMessage('Hello React!');
+          state.setMessage('Hello React!');
         }}
         value="PUSH!"
       />
       <input
         type="button"
         onClick={function onClick() {
-          setMessage('');
+          state.setMessage('');
         }}
         value="CLEAR!"
       />
