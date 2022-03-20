@@ -3,7 +3,7 @@ import {
   MainTemplateProps,
 } from 'components/templates/MainTemplate';
 import { Button } from 'components/atoms/Button';
-import { useComponentState } from './component-state';
+import { useComponentState } from './componentState';
 
 export type MyPageProps = {
   count: number;
