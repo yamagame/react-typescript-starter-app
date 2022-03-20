@@ -11,6 +11,7 @@ const urls = [
   { url: `/test-page`, title: 'TestPage' },
   { url: `/todo`, title: 'ToDoPage' },
   { url: `/todo-counter`, title: 'ToDoCounter' },
+  { url: `/mindmap`, title: 'Mindmap' },
 ];
 
 export function TopAdapter() {

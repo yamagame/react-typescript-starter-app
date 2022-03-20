@@ -9,6 +9,7 @@ import todoReducer from 'features/todo';
 import myPageReducer from 'features/mypage';
 import testPageReducer from 'features/testpage';
 import todoCounterReducer from 'features/todoCounter';
+import mindmapReducer from 'features/mindmap';
 
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
@@ -33,5 +34,6 @@ export const store = configureStore({
     myPage: myPageReducer,
     testPage: testPageReducer,
     todoCounter: todoCounterReducer,
+    mindmap: mindmapReducer,
   },
 });
