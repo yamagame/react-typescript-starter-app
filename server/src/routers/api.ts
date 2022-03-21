@@ -1,4 +1,5 @@
 import express from 'express';
+import { string } from 'yup';
 const router = express.Router();
 
 const pageData = [
@@ -42,6 +43,31 @@ router.patch('/todo', (req, res) => {
     todo.checked = req.body.todo.checked;
   }
   res.send(todo);
+});
+
+interface D3SampleItem {
+  name: string;
+  value: number;
+}
+const d3sample: { [index: string]: D3SampleItem[] } = {};
+
+router.get('/d3sample/:name', (req, res) => {
+  const data = d3sample[req.params.name];
+  if (data) {
+    return res.send(data);
+  }
+  res.send([
+    { name: 'value1', value: 1 },
+    { name: 'value2', value: 2 },
+  ]);
+});
+
+router.post('/d3sample/:name', (req, res) => {
+  const { data }: { data: D3SampleItem[] } = req.body;
+  if (data) {
+    d3sample[req.params.name] = data;
+  }
+  res.sendStatus(200);
 });
 
 export const apiRouter = router;

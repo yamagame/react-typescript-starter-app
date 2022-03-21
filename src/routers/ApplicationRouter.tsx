@@ -8,7 +8,7 @@ import { MyPageAdapter } from 'features/mypage/components/MyPageAdapter';
 import { TestPageAdapter } from 'features/testpage/components/TestPageAdapter';
 import { ToDoAdapter } from 'features/todo/components/ToDoAdapter';
 import { ToDoCounterAdapter } from 'features/todoCounter/components/ToDoCounterAdapter';
-import { MindmapAdapter } from 'features/mindmap/components/MindmapAdapter';
+import { D3SampleAdapter } from 'features/d3sample/components/D3SampleAdapter';
 
 export function AppRouter() {
   return (
@@ -26,8 +26,9 @@ export function AppRouter() {
         <Route path={'/my-page'} element={<MyPageAdapter />} />
         {/*-------------- テストページ */}
         <Route path={'/test-page'} element={<TestPageAdapter />} />
-        {/*-------------- マインドマップページ */}
-        <Route path={'/mindmap'} element={<MindmapAdapter />} />
+        {/*-------------- D3サンプルページ */}
+        <Route path={'/d3sample'} element={<D3SampleAdapter />} />
+        <Route path={'/d3sample/:pageName'} element={<D3SampleAdapter />} />
         {/*-------------- ToDOページ */}
         <Route path={'/todo'} element={<ToDoAdapter />} />
         {/*-------------- ToDOページ */}

@@ -21,6 +21,9 @@ export const testPageSlice = createSlice({
     decrement: (state) => {
       if (state.count > 0) state.count -= 1;
     },
+    reset: (state) => {
+      state.count = 0;
+    },
   },
 });
 

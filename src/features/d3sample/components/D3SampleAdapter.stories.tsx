@@ -3,19 +3,19 @@ import { store } from 'store';
 import { Provider } from 'react-redux';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { MindmapAdapter } from './MindmapAdapter';
+import { D3SampleAdapter } from './D3SampleAdapter';
 
 export default {
-  title: 'features/mindmapAdapter',
-  component: MindmapAdapter,
+  title: 'features/D3SampleAdapter',
+  component: D3SampleAdapter,
   argTypes: {},
-} as ComponentMeta<typeof MindmapAdapter>;
+} as ComponentMeta<typeof D3SampleAdapter>;
 
-const Template: ComponentStory<typeof MindmapAdapter> = (args) => (
+const Template: ComponentStory<typeof D3SampleAdapter> = (args) => (
   <Provider store={store}>
     <BrowserRouter>
       <Routes>
-        <Route path="*" element={<MindmapAdapter />} />
+        <Route path="*" element={<D3SampleAdapter />} />
       </Routes>
     </BrowserRouter>
   </Provider>

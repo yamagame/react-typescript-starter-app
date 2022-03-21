@@ -14,12 +14,16 @@ export function TestPageAdapter() {
   const onClickMinus = () => {
     dispatch(actions.decrement());
   };
+  const onClickReset = () => {
+    dispatch(actions.reset());
+  };
   return (
     <MyPage
       template={template}
       count={count}
       onClickPlus={onClickPlus}
       onClickMinus={onClickMinus}
+      onClickReset={onClickReset}
     />
   );
 }
