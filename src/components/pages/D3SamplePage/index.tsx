@@ -8,7 +8,9 @@ import { D3SampleItem } from './types';
 export type D3SampleProps = {
   data: D3SampleItem[];
   template: MainTemplateProps;
+  name: string;
   isLoading: boolean;
+  isUpdating: boolean;
   updateData: (data: D3SampleItem[]) => void;
 };
 
@@ -17,8 +19,10 @@ export function D3Sample(props: D3SampleProps) {
   return (
     <MainTemplate {...props.template} header="D3Sample">
       <form onSubmit={state.formik.handleSubmit}>
-        <div ref={state.d3Root}>Hello World</div>
+        <div>{props.name}</div>
+        <div ref={state.d3Root}></div>
         {props.isLoading && <div>Loading...</div>}
+        {props.isUpdating && <div>Updating...</div>}
         <textarea
           name="dataText"
           onChange={state.onChangeD3SampleText}

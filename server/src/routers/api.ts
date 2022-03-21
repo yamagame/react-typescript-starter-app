@@ -56,10 +56,12 @@ router.get('/d3sample/:name', (req, res) => {
   if (data) {
     return res.send(data);
   }
-  res.send([
-    { name: 'value1', value: 1 },
-    { name: 'value2', value: 2 },
-  ]);
+  setTimeout(() => {
+    res.send([
+      { name: 'value1', value: 1 },
+      { name: 'value2', value: 2 },
+    ]);
+  }, 500);
 });
 
 router.post('/d3sample/:name', (req, res) => {
@@ -67,7 +69,9 @@ router.post('/d3sample/:name', (req, res) => {
   if (data) {
     d3sample[req.params.name] = data;
   }
-  res.sendStatus(200);
+  setTimeout(() => {
+    res.sendStatus(200);
+  }, 500);
 });
 
 export const apiRouter = router;

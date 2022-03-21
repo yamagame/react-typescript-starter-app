@@ -1,15 +1,16 @@
 import { useParams } from 'react-router-dom';
 import { D3Sample } from 'components/pages/D3SamplePage';
+import { Link } from 'react-router-dom';
 import { useTemplateProps } from 'features/utils';
 import {
   useGetD3SampleByNameQuery,
   useUpdateD3SampleMutation,
 } from 'features/d3sample/services';
 import { D3SampleItem } from 'components/pages/D3SamplePage/types';
+import { MainTemplate } from 'components/templates/MainTemplate';
 
-export function D3SampleAdapter() {
+const D3SampleEditorPage = ({ pageName }: { pageName: string }) => {
   const template = useTemplateProps();
-  const { pageName } = useParams<{ pageName: string }>();
   const {
     data = [],
     error,
@@ -23,11 +24,26 @@ export function D3SampleAdapter() {
     <D3Sample
       key="editor"
       template={template}
+      name={pageName || ''}
       data={data}
-      isLoading={isLoading || isUpdating}
+      isLoading={isLoading}
+      isUpdating={isUpdating}
       updateData={(data: D3SampleItem[]) => {
         updatePost({ name: pageName || '', data });
       }}
     />
+  );
+};
+
+export function D3SampleAdapter() {
+  const template = useTemplateProps();
+  const { pageName } = useParams<{ pageName: string }>();
+  if (pageName) {
+    return <D3SampleEditorPage pageName={pageName} />;
+  }
+  return (
+    <MainTemplate {...template} header="D3Sample">
+      <Link to="/d3sample/main">main</Link>
+    </MainTemplate>
   );
 }
