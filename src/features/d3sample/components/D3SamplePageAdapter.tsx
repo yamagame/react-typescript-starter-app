@@ -1,3 +1,4 @@
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { D3Sample } from 'components/pages/D3SamplePage';
 import { useTemplateProps } from 'features/utils';
@@ -19,17 +20,21 @@ export const D3SamplePageAdapter = () => {
   } = useGetD3SampleByNameQuery(pageName || '');
   // データの書き出しフック
   const [updatePost, { isLoading: isUpdating }] = useUpdateD3SampleMutation();
+  // データの書き出し
+  const updateDataset = (data: D3SampleItem[]) => {
+    updatePost({ name: pageName || '', data: D3SampleItemToData(data) });
+  };
+  // データの読み込み
+  const dataset = React.useMemo(() => D3SampleDataToItem(data), [data]);
   return (
     <D3Sample
       key="editor"
       template={template}
       name={pageName || ''}
-      data={D3SampleDataToItem(data)}
+      data={dataset}
       isLoading={isLoading}
       isUpdating={isUpdating}
-      updateData={(data: D3SampleItem[]) => {
-        updatePost({ name: pageName || '', data: D3SampleItemToData(data) });
-      }}
+      updateData={updateDataset}
     />
   );
 };
