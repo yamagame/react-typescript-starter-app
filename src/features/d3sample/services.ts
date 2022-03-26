@@ -9,9 +9,11 @@ interface Post {
 export const d3sampleApi = createApi({
   reducerPath: 'd3sampleApi',
   baseQuery: fetchBaseQuery({ baseUrl: '/api' }),
+  tagTypes: ['Post'],
   endpoints: (builder) => ({
     getD3SampleByName: builder.query<D3SampleData[], string>({
       query: (name) => `d3sample/${name}`,
+      providesTags: ['Post'],
     }),
     updateD3Sample: builder.mutation<Post, Partial<Post> & Pick<Post, 'name'>>({
       query: ({ name, ...patch }) => ({
@@ -19,6 +21,7 @@ export const d3sampleApi = createApi({
         method: 'POST',
         body: patch,
       }),
+      invalidatesTags: ['Post'],
     }),
   }),
 });
