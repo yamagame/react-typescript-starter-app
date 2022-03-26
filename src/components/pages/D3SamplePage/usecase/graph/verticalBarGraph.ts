@@ -3,13 +3,8 @@ import { D3SampleItem } from '../../types';
 
 export const verticalBarGraph = (
   element: HTMLElement,
-  mindmapData: D3SampleItem[]
+  dataset: D3SampleItem[]
 ) => {
-  // 前回表示コンポーネントの削除
-  d3.select(element).selectAll('*').remove();
-
-  const dataset = mindmapData;
-
   const width = 500;
   const height = 300;
   const padding = 50;
@@ -21,7 +16,7 @@ export const verticalBarGraph = (
     .padding(0.1)
     .domain(
       dataset.map(function (d) {
-        return d.name;
+        return `${d.name}`;
       })
     );
 
@@ -38,12 +33,6 @@ export const verticalBarGraph = (
     .attr('width', 500)
     .attr('height', 300);
 
-  // 表示エリアの準備
-  const g = svg.append('g');
-
-  // バーの削除
-  g.selectAll('rect').data(dataset).exit().remove();
-
   // バーの表示
   svg
     .append('g')
@@ -58,6 +47,12 @@ export const verticalBarGraph = (
       return height - padding - yScale(d.value);
     })
     .attr('fill', 'skyblue');
+
+  // 表示エリアの準備
+  const g = svg.append('g');
+
+  // バーの削除
+  g.selectAll('rect').data(dataset).exit().remove();
 
   // X軸の表示
   g.append('g')

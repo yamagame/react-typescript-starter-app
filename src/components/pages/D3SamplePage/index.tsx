@@ -31,7 +31,9 @@ export function D3Sample(props: D3SampleProps) {
         <div
           style={{ width: 500, height: 300, display: 'inline-block' }}
           ref={state.d3Root}
-        ></div>
+        >
+          {/* ---------------------- */}
+        </div>
         {props.isLoading && <div>Loading...</div>}
         {props.isUpdating && <div>Updating...</div>}
         <div>
@@ -39,7 +41,8 @@ export function D3Sample(props: D3SampleProps) {
           <select onChange={selectGraphType} value={graphType}>
             <option value={D3SampleGraphType.VERTICAL_BAR}>VERTICAL</option>
             <option value={D3SampleGraphType.HORIZONTAL_BAR}>HORIZONTAL</option>
-            <option value={D3SampleGraphType.TEXT}>TEXT</option>
+            <option value={D3SampleGraphType.NORMAL_TEXT}>NORMAL TEXT</option>
+            <option value={D3SampleGraphType.RED_TEXT}>RED TEXT</option>
           </select>
         </div>
         {/* データセット入力エリア */}

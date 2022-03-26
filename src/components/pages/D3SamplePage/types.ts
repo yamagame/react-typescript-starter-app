@@ -9,7 +9,8 @@ export interface FormProps {
 }
 
 export enum D3SampleGraphType {
-  TEXT = 'text',
+  NORMAL_TEXT = 'normal-text',
+  RED_TEXT = 'red-text',
   VERTICAL_BAR = 'vertical-bar',
   HORIZONTAL_BAR = 'horizontal-bar',
 }

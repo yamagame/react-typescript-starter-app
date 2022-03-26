@@ -41,9 +41,30 @@ exports[`Appの表示 1`] = `
     </div>
     <div>
       <a
+        href="/test-page"
+      >
+        TestPage
+      </a>
+    </div>
+    <div>
+      <a
         href="/todo"
       >
         ToDoPage
+      </a>
+    </div>
+    <div>
+      <a
+        href="/todo-counter"
+      >
+        ToDoCounter
+      </a>
+    </div>
+    <div>
+      <a
+        href="/d3sample"
+      >
+        D3Sample
       </a>
     </div>
   </div>
