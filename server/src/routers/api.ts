@@ -51,6 +51,9 @@ interface D3SampleItem {
 }
 const d3sample: { [index: string]: D3SampleItem[] } = {};
 
+/**
+ * CSVデータの読み込み
+ */
 router.get('/d3sample/:name', (req, res) => {
   const data = d3sample[req.params.name];
   if (data) {
@@ -64,6 +67,9 @@ router.get('/d3sample/:name', (req, res) => {
   }, 500);
 });
 
+/**
+ * CSVデータの書き出し
+ */
 router.post('/d3sample/:name', (req, res) => {
   const { data }: { data: D3SampleItem[] } = req.body;
   if (data) {

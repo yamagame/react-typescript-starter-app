@@ -3,19 +3,19 @@ import { store } from 'store';
 import { Provider } from 'react-redux';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { D3SampleAdapter } from './D3SampleAdapter';
+import { D3SamplePageAdapter } from './D3SamplePageAdapter';
 
 export default {
   title: 'features/D3SampleAdapter',
-  component: D3SampleAdapter,
+  component: D3SamplePageAdapter,
   argTypes: {},
-} as ComponentMeta<typeof D3SampleAdapter>;
+} as ComponentMeta<typeof D3SamplePageAdapter>;
 
-const Template: ComponentStory<typeof D3SampleAdapter> = (args) => (
+const Template: ComponentStory<typeof D3SamplePageAdapter> = (args) => (
   <Provider store={store}>
     <BrowserRouter>
       <Routes>
-        <Route path="*" element={<D3SampleAdapter />} />
+        <Route path="*" element={<D3SamplePageAdapter />} />
       </Routes>
     </BrowserRouter>
   </Provider>

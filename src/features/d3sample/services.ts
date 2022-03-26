@@ -24,6 +24,6 @@ export const d3sampleApi = createApi({
 });
 
 export const {
-  useGetD3SampleByNameQuery, //
-  useUpdateD3SampleMutation, //
+  useGetD3SampleByNameQuery, // 読込
+  useUpdateD3SampleMutation, // 保存
 } = d3sampleApi;

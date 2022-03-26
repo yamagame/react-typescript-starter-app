@@ -1,17 +1,18 @@
-import * as d3 from 'd3';
-import { D3SampleItem } from '../types';
+import { D3SampleItem, D3SampleGraphType } from '../types';
+import { textGraph } from './graph/textGraph';
+import { horizontalBarGraph } from './graph/horizontalBarGraph';
+import { verticalBarGraph } from './graph/verticalBarGraph';
+
+const graph = {
+  [D3SampleGraphType.TEXT]: textGraph,
+  [D3SampleGraphType.VERTICAL_BAR]: verticalBarGraph,
+  [D3SampleGraphType.HORIZONTAL_BAR]: horizontalBarGraph,
+};
 
 export const updateElement = (
   element: HTMLElement,
-  mindmapData: D3SampleItem[]
+  mindmapData: D3SampleItem[],
+  graphType: D3SampleGraphType
 ) => {
-  const toText = (d: D3SampleItem) => {
-    return `${d.name} : ${d.value}`;
-  };
-  const pElement = d3
-    .select(element)
-    .selectAll<HTMLParagraphElement, D3SampleItem[]>('p')
-    .data(mindmapData);
-  pElement.enter().append('p').text(toText).merge(pElement).text(toText);
-  pElement.exit().remove();
+  graph[graphType](element, mindmapData);
 };
