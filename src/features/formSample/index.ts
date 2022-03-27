@@ -12,6 +12,7 @@ export interface State {
   size: Size;
   blood: string;
   fruit: Fruit;
+  option: string;
 }
 
 const initialState: State = {
@@ -23,6 +24,7 @@ const initialState: State = {
     tangerine: false,
     grape: false,
   },
+  option: '',
 };
 
 export const formSampleSlice = createSlice({
@@ -46,6 +48,9 @@ export const formSampleSlice = createSlice({
         ...state.fruit,
         [action.payload.fruit]: action.payload.value,
       };
+    },
+    setOption: (state, action: PayloadAction<string>) => {
+      state.option = action.payload;
     },
   },
 });

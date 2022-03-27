@@ -16,12 +16,16 @@ export function FormAdapter() {
       name={state.name}
       fruit={state.fruit}
       blood={state.blood}
+      option={state.option}
+      options={['option1', 'option2']}
+      disabled={false}
       actions={{
         onChangeName: (name) => dispatch(actions.setName(name)),
         onChangeSize: (size) => dispatch(actions.setSize(size)),
         onChangeFruit: (fruit, value) =>
           dispatch(actions.setFruit({ fruit, value })),
         onChagenBlood: (blood) => dispatch(actions.setBlood(blood)),
+        onChangeOption: (option) => dispatch(actions.setOption(option)),
         onSubmit: () => navigate('/'),
       }}
       template={template}

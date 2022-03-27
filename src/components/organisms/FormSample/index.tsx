@@ -12,17 +12,22 @@ export type FormSampleProps = {
   size: FormSampleSize;
   fruit: FormSampleFruit;
   blood: string;
+  disabled: boolean;
+  option: string;
+  options: string[];
   actions: {
     onChangeName: (name: string) => void;
     onChangeSize: (size: FormSampleSize) => void;
     onChangeFruit: (fruit: string, value: boolean) => void;
     onChagenBlood: (blood: string) => void;
+    onChangeOption: (option: string) => void;
     onSubmit: () => void;
   };
 };
 
 export function FormSample(props: FormSampleProps) {
-  const { name, actions, size, fruit, blood } = props;
+  const { name, actions, size, fruit, blood, disabled, option, options } =
+    props;
   const navigate = useNavigate();
   return (
     <>
@@ -86,6 +91,7 @@ export function FormSample(props: FormSampleProps) {
       <div>
         <select
           name="blood"
+          disabled={disabled}
           value={blood}
           onChange={(e) => actions.onChagenBlood(e.target.value)}
         >
@@ -96,8 +102,32 @@ export function FormSample(props: FormSampleProps) {
         </select>
       </div>
       <div>
-        <input type="button" value="戻る" onClick={() => navigate(-1)} />
-        <input type="submit" value="OK" onClick={() => actions.onSubmit()} />
+        <select
+          name="options"
+          disabled={disabled}
+          value={option}
+          onChange={(e) => actions.onChangeOption(e.target.value)}
+        >
+          {options.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div>
+        <input
+          type="button"
+          value="戻る"
+          disabled={disabled}
+          onClick={() => navigate(-1)}
+        />
+        <input
+          type="submit"
+          value="OK"
+          disabled={disabled}
+          onClick={() => actions.onSubmit()}
+        />
       </div>
     </>
   );

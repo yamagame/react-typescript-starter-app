@@ -1,5 +1,4 @@
 import express from 'express';
-import { string } from 'yup';
 const router = express.Router();
 
 const pageData = [
@@ -12,7 +11,9 @@ const pageData = [
 ];
 
 router.get('/pages', (req, res) => {
-  res.send(pageData);
+  setTimeout(() => {
+    res.send(pageData);
+  }, 1000);
 });
 
 const todoData = [
